@@ -7,6 +7,8 @@ import Link from "./link"
 import externalCss from "../assets/extracss/extracss.min.css";
 // import  {getPageData}  from "./api";
 import { Global, css } from "frontity";
+import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 
 const Root = ({ state, actions, libraries }) => {
@@ -33,15 +35,17 @@ const Root = ({ state, actions, libraries }) => {
         <Link href="/annual-travel-insurance">annual-travel-insurance</Link>
       </nav>
       <hr />
-      <main>
+      {/* <main> */}
         {/* {getPageData} */}
-        <hr />
+        {/* <hr /> */}
+        <Header />
         <Switch>
           {/* <Loading when={data.isFetching} /> */}
           <Page when={!data.isHome} />
           <Home when={data.isHome} />
         </Switch>
-      </main>
+        <Footer />
+      {/* </main> */}
     </>
   );
 };

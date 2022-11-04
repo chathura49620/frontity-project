@@ -22,6 +22,7 @@
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
     "frontity": "^1.17.2",
-    "petsure-theme": "file:packages/petsure-theme"
+    "petsure-theme": "file:packages/petsure-theme",
+    "react-gtm-module": "^2.0.11"
   }
 }

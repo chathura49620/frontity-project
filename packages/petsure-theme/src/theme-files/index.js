@@ -5,6 +5,7 @@ import Page from './Pages/Page'
 import Home from './Pages/Home'
 import Link from "./link"
 import externalCss from "../assets/extracss/extracss.min.css";
+import TagManager from 'react-gtm-module';
 // import  {getPageData}  from "./api";
 import { Global, css } from "frontity";
 import Footer from './Components/Footer';
@@ -13,6 +14,11 @@ import Header from './Components/Header';
 
 const Root = ({ state, actions, libraries }) => {
   
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-W7KCK35' });
+    }, []);
+
+
   const data = state.source.get(state.router.link);
   if (!data.isHome) {
     const dataFronApi = libraries.source.api.get({

@@ -15,7 +15,7 @@ import Header from './Components/Header';
 const Root = ({ state, actions, libraries }) => {
   
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-W7KCK35' });
+    TagManager.initialize({ gtmId: 'GTM-P2JS76D' });
     }, []);
 
 

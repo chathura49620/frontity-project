@@ -1,0 +1,220 @@
+.promo-code{
+  padding: 0;
+  width: 100%;
+  margin: 5px 0;
+  .promo-link{
+    display: block;
+    padding: 0 30px 0 0;
+    border: 2px solid $cyber-monday;
+    text-decoration: none;
+    @media screen and (max-width: 1100px){
+      padding-right: 15px;
+    }
+    @media screen and (max-width: 767px){
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+    .promo-details{
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 991px){
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+      }
+      .main-title{
+        display: flex;
+        background: $cyber-monday;
+        padding: 12px 30px;
+        justify-content: center;
+        @media screen and (max-width: 991px){
+          width: 40%;
+          justify-content: center;
+          padding: 25px 30px;
+        }
+        @media screen and (max-width: 767px){
+          width: 100%;
+          padding: 12px 30px;
+        }
+        h3, h4{
+          font-size: 40px;
+          color: $white;
+          text-transform: uppercase;
+          font-weight: 800;
+          font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+          line-height: 48px;
+          display: inline;
+          margin: 0 5px;
+          padding: 0;
+          &:before, &:after{
+            display: none;
+          }
+        }
+        p.title{
+          display: block;
+          width: 100%;
+          line-height: 42px;
+          font-size: 38px;
+          margin: 0 3px;
+          font-weight: 500;
+          color: $white;
+          font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+          @media screen and (max-width: 991px){
+            font-size: 30px;
+            width: auto;
+          }
+        }
+      }
+      .discount-percentage{
+        font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+        color: $cyber-monday;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 6px 15px;
+        @media screen and (max-width: 991px){
+          border-right: none;
+          width: 30%;
+          padding-bottom: 30px;
+        }
+        @media screen and (max-width: 767px){
+          width: 100%;
+          justify-content: center;
+          padding-bottom: 6px;
+        }
+        .t3{
+          margin:0 15px;
+          display: flex;
+          align-items: end;
+          padding-right: 25px;
+          border-right: 1px solid $cyber-monday;
+          @media screen and (max-width: 1100px){
+            padding-right: 10px;
+            margin: 0;
+          }
+          @media screen and (max-width: 991px){
+            border-right: 0;
+            padding-right: 0;
+          }
+          > .offer{
+            font-size: 65px;
+            width: 70px;
+            line-height: 54px;
+            display: inline-block;
+            margin-right: 2px;
+            margin-top: 0;
+          }
+          > .small-text{
+            display: flex;
+            margin-bottom: 0;
+            margin-top: auto;
+            .sup{
+              font-size: 30px;
+              line-height: 30px;
+              margin: 0;
+              margin-right: 2px;
+            }
+            .sub{
+              line-height: 16px;
+              font-size: 50px;
+              margin: 0;
+              small{
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .t1{
+          font-size: 21px;
+          margin: 0 15px 0 0;
+        }
+      }
+      .term{
+        display: flex;
+        color: #000000;
+        margin: 0;
+        font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+        align-items: center;
+        @media screen and (max-width: 991px){
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 0;
+          margin-top: 10px;
+          order: 4;
+          display: inline-block;
+          position: absolute;
+          bottom: 10px;
+          left: 40%;
+          padding-left: 15px;
+        }
+        @media screen and (max-width: 767px){
+          flex-wrap: wrap;
+          justify-content: center;
+          position: static;
+          display: flex;
+          margin: 0;
+        }
+        > strong{
+          font-size: 16px;
+          text-align: center;
+          line-height: 18px;
+          min-width: 120px;
+          margin: 0;
+          @media screen and (max-width: 1100px){
+            font-size: 14px;
+          }
+          @media screen and (max-width: 767px){
+            min-width: 108px;
+            width: 100%;
+          }
+        }
+        > span{
+          font-size: 13px;
+          line-height: 16px;
+          margin: 0;
+          @media screen and (max-width: 767px){
+            width: 100%;
+            text-align: center;
+          }
+          > .seperator{
+            padding: 0 12px;
+            @media screen and (max-width: 1100px){
+              padding: 0 5px;
+            }
+            @media screen and (max-width: 767px){
+              display: none;
+            }
+          }
+        }
+      }
+      .promo-button{
+        padding: 8px 40px;
+        font-size: 16px;
+        font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin-right: 0;
+        margin-left: auto;
+        white-space: nowrap;
+        border: none;
+        outline: none;
+        @media screen and (max-width: 1100px){
+          padding: 8px 30px;
+        }
+        @media screen and (max-width: 991px){
+          margin: auto 0 auto auto;
+          padding: 10px 30px;
+          font-size: 16px;
+          order: 3;
+        }
+        @media screen and (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+  }
+}

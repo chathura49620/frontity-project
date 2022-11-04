@@ -1,0 +1,683 @@
+.hero-banner{
+  &.special-hero{
+    position: relative;
+    background-color: $bg-primary;
+    padding: 0;
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      .col-md-7{
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 percentage(7/12);
+          flex: 0 0 percentage(7/12);
+          max-width: percentage(7/12);
+        }
+      }
+    }
+    .container{
+      max-width: 70rem;
+      padding: 0 1rem;
+      margin: 0 auto;
+    }
+    .bg-image{
+      background: url("https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2020/06/26053253/hero_image_v3.jpg") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      width: percentage(5/12);
+      height: 100%;
+      right: 0;
+      @include media-breakpoint-down(sm){
+        background-image: none;
+        display: none;
+      }
+    }
+    .hero-container{
+      @include media-breakpoint-down(sm){
+        padding: 0;
+      }
+      .hero-summery{
+        padding-right: 1rem;
+        @include media-breakpoint-down(sm){
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+        }
+        @include media-breakpoint-down(sm){
+          padding: 40px 15px;
+          text-align: center;
+        }
+        ul{
+          @include media-breakpoint-down(sm){
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+          }
+        }
+        a{
+          @include media-breakpoint-down(sm){
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+    .hero-summery{
+      padding: 49px 0;
+    }
+    h1{
+      font-size: 40px;
+      line-height: 46px;
+      font-weight: 800;
+      margin-bottom: 34px;
+      margin-top: 0;
+      color: $light-white;
+      @include media-breakpoint-down(md){
+        font-size: 48px;
+        line-height: 44px;
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(sm){
+        margin-bottom: 20px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 20px;
+      }
+    }
+    h3{
+      font-family: $font-ciutadella;
+      font-size: 34px;
+      font-weight: 400;
+      color: $light-white;
+      margin-bottom: 50px;
+      line-height: normal;
+      @include media-breakpoint-down(sm){
+        margin-bottom: 25px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
+    }
+    ul{
+      list-style: none;
+      margin-bottom: 34px;
+      font-family: $font-ciutadella;
+      margin-top: 0;
+      padding-left: 35px;
+      @include media-breakpoint-down(xs){
+        padding-left: 25px;
+      }
+      li{
+        font-size: 26px;
+        margin-bottom: 0.5rem;
+        @include media-breakpoint-down(md){
+          font-size: 20px;
+          margin-bottom: 0.25rem;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 16px;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &:before{
+          content: '\f00c';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          color: $cyber-monday;
+          margin-right: 16px;
+          margin-left: -35px;
+          position: absolute;
+          @include media-breakpoint-down(xs){
+            margin-left: -25px;
+          }
+
+        }
+      }
+    }
+    p{
+      font-family: $font-ciutadella;
+      font-size: 22px;
+      line-height: normal;
+      font-weight: 400;
+      @include media-breakpoint-down(xs){
+        font-size: 20px;
+      }
+      a{
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+    strong{
+      font-weight: bold;
+    }
+    .terms-note{
+      position: absolute;
+      bottom: 12px;
+      @include media-breakpoint-down(sm){
+        padding-top: 0px;
+        position: relative;
+        bottom: 10px;
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+      a{
+        font-size: 12px;
+        text-decoration: none;
+        color: $light-white;
+        font-family: $font-ciutadella;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    .hero-action{
+      display: flex;
+      margin-top: 40px;
+      align-items: center;
+      @include media-breakpoint-down(sm){
+        margin-top: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      .btn{
+        margin-top: 0;
+        &.cta{
+          height: 53px;
+          font-size: 26px;
+          padding: 12px 55px;
+          line-height: 26px;
+          font-weight: 700;
+          margin-right: 2rem;
+          outline: 0;
+          @include media-breakpoint-down(md){
+            font-size: 20px;
+            padding: 12px 30px;
+            line-height: 20px;
+          }
+          @include ipad-portrait{
+            max-width: 240px;
+          }
+          @include media-breakpoint-down(xs){
+            margin-right: 10px;
+            padding: 12px 16px;
+            line-height: 29px;
+          }
+        }
+        &.my-account{
+          height: 53px;
+          font-size: 24px;
+          padding: 12px 22px;
+          line-height: 24px;
+          font-weight: 500;
+          background-color: transparent;
+          border: 1px solid $white;
+          outline: 0;
+          color: $white;
+          @include media-breakpoint-down(md){
+            font-size: 20px;
+            padding: 12px 30px;
+            line-height: 20px;
+          }
+          @include media-breakpoint-down(sm){
+            margin: {
+              left: 0;
+            };
+          }
+          @include media-breakpoint-down(xs){
+            padding: 12px 16px;
+            line-height: 25px;
+
+          }
+        }
+      }
+    }
+    .offer-wrapper{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      z-index: 1;
+      .offer-content{
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+//home-page
+.special-hero-home{
+  clear: both;
+  background-color: $bg-primary;
+  color: $light-white;
+  font-family: $font-ciutadella;
+  font-family: "Ciutadella Rounded",Sans-serif;
+  min-height: 110px;
+  margin-top: 0px;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2em !important;
+  .hero-container{
+    padding: {
+      left: 0;
+      right: 0;
+    };
+    position: relative;
+
+    @include media-breakpoint-down(sm){
+      padding: {
+        left: 0;
+        right: 0;
+      };
+    }
+    @include media-breakpoint-down(xs){
+      padding: {
+        left: 15px;
+        right: 15px;
+      };
+    }
+    @media (min-width: 992px){
+      padding: {
+        left: 0px;
+        right: 0px;
+      };
+    }
+    @media (min-width: 1120px){
+      //padding: 0 1em;
+    }
+    .row{
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      .col-lg-9{
+        flex: 0 0 75%;
+        max-width: 75%;
+        @include media-breakpoint-down(sm){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        @include media-breakpoint-down(xs){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .col-lg-7{
+        //padding: 0 28px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 56%;
+        flex: 0 0 56%;
+        max-width: 56%;
+        margin-top:0 !important;
+        @include media-breakpoint-down(sm){
+          padding: 0;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        @include media-breakpoint-down(xs){
+          padding: 0;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        @include media-breakpoint-down(sm){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        @include media-breakpoint-down(xs){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .col-lg-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 14%;
+        flex: 0 0 14%;
+        max-width: 14%;
+        @include media-breakpoint-down(sm){
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: center;
+        }
+        @include media-breakpoint-down(xs){
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: center;
+        }
+        img {
+          max-width: 60%;
+          @include media-breakpoint-down(sm){
+            max-width: 35%;
+            margin-bottom: 20px;
+          }
+          @include media-breakpoint-down(xs){
+            max-width: 35%;
+            margin-bottom: 20px;
+          }
+        }
+        .font-icon{
+          text-align: center;
+          vertical-align: top;
+          margin-top: 0;
+          .fa-suitcase-rolling:before{content:"\f5c1"}
+        }
+      }
+    }
+  }
+  .hero-summery{
+    .h1{
+      font-size: 31px;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 10px;
+      //padding-bottom: 20px;
+      font-family: "Ciutadella Rounded",Sans-serif;
+      @include media-breakpoint-down(lg){
+        font-size: 28px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 36px;
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 34px;
+        text-align: center;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 23px;
+        text-align: center;
+      }
+      @include iphone5{
+        font-size: 20px;
+        text-align: center;
+      }
+      strong{
+        font-weight: 600;
+        //font-weight: bold;
+      }
+      .small-mobile{
+        display: inline;
+        @include media-breakpoint-down(md){
+          display: block;
+          font-size: 24px;
+        }
+        @include media-breakpoint-down(sm){
+          font-size: 21px;
+          margin-top: 0em;
+        }
+        @include iphone5{
+          font-size: 18px;
+          margin-top: 0em;
+        }
+      }
+    }
+    .sub-title{
+      font-size: 20px;
+      margin: 0;
+      line-height: 1.2;
+      font-family: "Ciutadella Rounded",Sans-serif;
+      max-width: 95%;
+      @include media-breakpoint-down(lg){
+        font-size: 18px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 18px;
+        //max-width: calc(100% - 170px);
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 18px;
+        //max-width: 100%;
+        text-align: center;
+      }
+      @include media-breakpoint-down(xs){
+        //max-width: 100%;
+        text-align: center;
+      }
+      @include iphone5{
+        font-size: 16px;
+        text-align: center;
+        //max-width: calc(100% - 120px);
+      }
+      .small-link{
+        color: $light-white;
+        font-size: 14px;
+        text-decoration: underline;
+        @include media-breakpoint-down(md){
+          display: block;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+        @include iphone5{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .offer-wrapper{
+    display: flex;
+    @include media-breakpoint-down(md){
+      //position: absolute;
+      //right: 40px;
+      //bottom: 0px;
+      //display: block;
+      //width: 170px;
+      //padding: 0;
+    }
+    @include media-breakpoint-down(sm){
+      right: 20px;
+      width: 142px;
+    }
+    @include media-breakpoint-down(xs){
+      width: 130px;
+    }
+    @include iphone5{
+      width: 118px;
+    }
+    .btn{
+      &.my-account{
+        height: 37px;
+        font-size: 20px;
+        padding: 7px 22px;
+        //padding: 10.2px 15.3px;
+        line-height: 20px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid $white;
+        outline: 0;
+        color: $white;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: auto;
+        @include media-breakpoint-down(sm){
+          margin: {
+            left: auto;
+            right: auto;
+          };
+          padding: {
+            left: 15px;
+            right: 15px;
+          };
+          font-size: 18px;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 16px;
+        }
+        @include iphone5{
+          font-size: 16px;
+          padding: {
+            top: 5px;
+            bottom: 5px;
+          };
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+//product-page
+.special-hero-product{
+  background-color: $bg-primary;
+  color: $light-white;
+  font-family: $font-ciutadella;
+  min-height: 110px;
+  padding: {
+    top: 18px;
+    bottom: 25px;
+  };
+  .hero-container{
+    padding: {
+      left: 40px;
+      right: 40px;
+    };
+    position: relative;
+    @include media-breakpoint-down(xs){
+      padding: {
+        left: 20px;
+        right: 20px;
+      };
+    }
+    .row{
+      align-items: center;
+    }
+  }
+  .hero-summery{
+    .h1{
+      font-size: 31px;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 10px;
+      @include media-breakpoint-down(lg){
+        font-size: 28px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 36px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 23px;
+      }
+      @include iphone5{
+        font-size: 20px;
+      }
+      strong{
+        font-weight: 600;
+      }
+      .small-mobile{
+        display: inline;
+        @include media-breakpoint-down(md){
+          display: block;
+          font-size: 24px;
+        }
+        @include media-breakpoint-down(sm){
+          font-size: 21px;
+        }
+        @include iphone5{
+          font-size: 18px;
+        }
+      }
+    }
+    .sub-title{
+      font-size: 20px;
+      margin: 0;
+      line-height: 1.2;
+      @include media-breakpoint-down(lg){
+        font-size: 18px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 16px;
+        max-width: calc(100% - 170px);
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+        max-width: calc(100% - 142px);
+      }
+      @include media-breakpoint-down(xs){
+        max-width: calc(100% - 130px);
+      }
+      @include iphone5{
+        font-size: 13px;
+        max-width: calc(100% - 120px);
+      }
+      .small-link{
+        color: $light-white;
+        font-size: 14px;
+        text-decoration: underline;
+        @include media-breakpoint-down(md){
+          display: block;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+        @include iphone5{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .offer-wrapper{
+    display: flex;
+    @include media-breakpoint-down(md){
+      position: absolute;
+      right: 40px;
+      bottom: 0px;
+      display: block;
+      width: 170px;
+      padding: 0;
+    }
+    @include media-breakpoint-down(sm){
+      right: 20px;
+      width: 142px;
+    }
+    @include media-breakpoint-down(xs){
+      width: 130px;
+    }
+    @include iphone5{
+      width: 118px;
+    }
+    .btn{
+      &.my-account{
+        height: 37px;
+        font-size: 20px;
+        padding: 7px 22px;
+        line-height: 20px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid $white;
+        outline: 0;
+        color: $white;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: auto;
+        @include media-breakpoint-down(sm){
+          margin: {
+            left: auto;
+            right: auto;
+          };
+          padding: {
+            left: 15px;
+            right: 15px;
+          };
+          font-size: 18px;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 16px;
+        }
+        @include iphone5{
+          font-size: 14px;
+          padding: {
+            top: 5px;
+            bottom: 5px;
+          };
+          height: 32px;
+        }
+      }
+    }
+  }
+}

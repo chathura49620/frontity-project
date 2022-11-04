@@ -1,0 +1,194 @@
+.tables-wrapper {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+  }
+
+  .single-table-wrapper {
+
+    .why-choose-tbl {
+      width: 100%;
+      display: table !important;
+      border-spacing: 0; 
+      border-collapse: separate;
+
+      tr {
+          border-bottom: none !important;
+
+        &:nth-of-type(2n+1) {
+          background-color: $white !important;
+        }
+
+        td {
+          border-top: none;
+          vertical-align: middle;
+          padding-left: 15px;
+          text-align: center;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          font-weight: 600;
+          @include media-breakpoint-up(lg){
+            font-size: 15px;
+          }
+          
+
+          @include media-breakpoint-up(sm){
+            text-align: left;
+          }
+
+          br{
+            @include media-breakpoint-up(sm){
+              display: none;
+            }
+          }
+
+          &:nth-of-type(2) {
+            border-left: 1px solid $primary;
+            border-right: 1px solid $primary;
+            text-align: left;
+            border-top-left-radius: unset;
+            border-bottom-left-radius: unset;
+            font-weight: 400;
+
+            .icont-text-wrapper {
+              display: flex;
+              align-items: baseline;
+              justify-content: center;
+              @include media-breakpoint-up(sm){
+                justify-content: left;
+              }
+            }
+
+            .fa-check {
+              color: $primary;
+              margin-right: 5px;
+            }
+          }
+
+          span {
+            @include media-breakpoint-down(xs){
+              min-width: unset;
+            }
+          }
+        }
+
+        &:last-of-type {
+          td {
+            &:nth-of-type(2) {
+              border-bottom: 1px solid $primary;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+          }
+        }
+      }
+      thead{
+        height: 70px;
+        @include media-breakpoint-down(xs){
+          height: 60px;
+        }
+        tr {
+          th {
+              height: 70px;
+              vertical-align: middle;
+              background: #F5F5F5;
+              padding-left: 15px;
+              font-weight: 700;
+              text-align: center;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+
+              @include media-breakpoint-up(sm){
+                text-align: left;
+              }
+
+              @include media-breakpoint-down(xs){
+                font-size: 16px;
+                height: 60px;
+              }
+
+              &:nth-of-type(2) {
+                font-weight: 600;
+                background: $primary;
+                color: $white;
+                border-left: 1px solid $primary;
+                border-right: 1px solid $primary;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: unset;
+                border-bottom-right-radius: unset;
+              }
+          }
+        }
+      }
+    }
+    &.second-table{
+
+      @include media-breakpoint-up(sm){
+        margin-left: 20px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 100px;
+      }
+
+
+      p{
+        font-size: 14px;
+      }
+
+      .why-choose-tbl {
+        thead{
+          tr {
+            th {
+              @include media-breakpoint-down(xs){
+                padding-top: 7px;
+                padding-bottom: 7px;
+              }
+                &:nth-of-type(2) {
+                  background: $tag-bg;
+                  border-left: 1px solid $tag-bg;
+                  border-right: 1px solid $tag-bg;
+                }
+            }
+          }
+        }
+        tr {
+          td {
+            &:nth-of-type(2) {
+              border-left: 1px solid $tag-bg;
+              border-right: 1px solid $tag-bg;
+
+              .fa-check {
+                color: $tag-bg;
+              }
+            }
+            span {
+              @include media-breakpoint-down(xl){
+                min-width: 160px;
+              }
+              @include media-breakpoint-down(sm){
+                min-width: unset;
+              }
+            }
+          }
+          &:last-of-type {
+            td {
+              &:nth-of-type(2) {
+                border-bottom: 1px solid $tag-bg;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.seperating-text {
+  text-align: center;
+  margin: 30px 0;
+  p{
+    font-size: 20px;
+  }
+}
+

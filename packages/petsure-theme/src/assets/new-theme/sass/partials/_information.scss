@@ -1,0 +1,52 @@
+.information-block {
+  color: #0a0a0a;
+  margin-bottom: 57px;
+ 
+  @include media-breakpoint-down(sm) { 
+    text-align: center;
+  }
+
+  .sub-title {
+    color: #0a0a0a;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .description-wrapper {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 770px;
+    }
+
+    .description {
+      color: #0a0a0a;
+      margin-bottom: 18px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 24px;
+        font-size: 21px;
+      }
+
+      a {
+        color: #654e9c;
+
+        &:hover {
+          color: #654e9c;
+        }
+
+        &:visited {
+          color: #654e9c;
+        }
+
+        &:active {
+          color: #654e9c;
+        }
+      }
+    }
+  }
+}

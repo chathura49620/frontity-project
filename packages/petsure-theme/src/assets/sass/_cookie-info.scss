@@ -1,0 +1,108 @@
+
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  max-width: 385px;
+  height: 59px;
+  background-color: $white;
+  transform: translateY(120%);
+  transition: translateY 500ms ease-out;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  margin: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.37);
+  opacity: 0;
+  visibility: hidden;
+  @include media-breakpoint-down(xs){
+    width: 100%;
+    left: 0;
+    max-width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 6px 0 rgba(196, 196, 196, 0.36);
+    height: 67px;
+  }
+  &.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+  }
+  * + *{
+    margin-top: initial;
+  }
+  .icon{
+    background-color: $bg-primary;
+    color: $white;
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    padding: 18px;
+    flex: 1 1 auto !important;
+    @include media-breakpoint-down(xs){
+      width: 67px;
+      height: 67px;
+      min-width: 67px;
+      padding: 21px;
+    }
+    img{
+      width: 22px;
+      height: auto;
+      margin: auto;
+      @include media-breakpoint-down(xs){
+        width: 25px;
+      }
+    }
+  }
+  .cookie-content{
+    color: $cookie-color;
+    font-family: $font-ciutadella;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    padding: {
+      top: 14px;
+      right: 51px;
+      bottom: 14px;
+      left: 12px;
+    };
+    @include media-breakpoint-down(xs){
+      padding: {
+        top: 14px;
+        right: 32px;
+        bottom: 14px;
+        left: 13px;
+      };
+    }
+    line-height: 1.21;
+    a{
+      color: $bg-primary;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .cookie-cta{
+    position: absolute;
+    top: 14px;
+    right: 9px;
+    background-color: $white;
+    color: $cookie-color;
+    border: none;
+    font-size: 9px;
+    padding: 0;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    @include media-breakpoint-down(xs){
+      top: 9px;
+      right: 9px;
+    }
+    i{
+      font-size: 13px;
+    }
+  }
+}

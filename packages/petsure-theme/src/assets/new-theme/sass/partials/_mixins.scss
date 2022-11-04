@@ -1,0 +1,52 @@
+@mixin if-ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin circle-icon($width, $height, $border-radius) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+}
+
+@mixin button(
+  $width,
+  $height,
+  $border-radius,
+  $bg-color,
+  $text-color,
+  $font-size
+) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-title-regular;
+  font-size: $font-size;
+  font-weight: bold;
+  padding: 0;
+}
+
+@mixin border-opacity($border-color, $border-opacity) {
+  border-color: rgba($border-color, $border-opacity);
+}
+
+@mixin background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin flex-property($direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+@mixin mobile-landscape {
+  @media only screen and (max-width: 900px) and (max-height: 576px) and (orientation: landscape) {
+    @content;
+  }
+}

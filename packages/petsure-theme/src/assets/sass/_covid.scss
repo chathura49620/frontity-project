@@ -1,0 +1,240 @@
+//Covid-page
+.covid-help{
+  clear: both;
+  background-color: $primary;
+  color: $light-white;
+  font-family: $font-regular;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: {
+    top: 40px;
+    bottom: 40px;
+  };
+  @include media-breakpoint-down(sm){
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    };
+    margin-bottom: 5px
+  }
+  .hero-container{
+    //padding: {
+    //  left: 40px;
+    //  right: 40px;
+    //};
+    position: relative;
+    @include media-breakpoint-down(xs){
+      padding: {
+        left: 20px;
+        right: 20px;
+      };
+    }
+    @include media-breakpoint-down(sm){
+      padding: {
+        left: 20px;
+        right: 20px;
+      };
+    }
+    @media (min-width: 992px){
+      padding: {
+        left: 40px;
+        right: 40px;
+      };
+    }
+    @media (min-width: 1120px){
+      padding: 0 1em;
+    }
+    .row{
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      .col-lg-9{
+        flex: 0 0 75%;
+        max-width: 75%;
+        @include media-breakpoint-down(xs){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        @include media-breakpoint-down(xs){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .hero-summery{
+    .h1{
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 700;
+      @include media-breakpoint-down(lg){
+        font-size: 28px;
+      }
+      @include media-breakpoint-down(md){
+        font-size: 36px;
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 26px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 26px;
+      }
+      @include iphone5{
+        font-size: 17px;
+      }
+      strong{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+img.travellers-walking{
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+}
+
+.new-existing-customer{
+    background-color: #f8f8f8;
+    padding: 2.5%;
+    margin: 20px 0;
+  @include media-breakpoint-down(sm){
+    padding-bottom: 40px;
+  }
+  .container{
+    .row{
+      .policy-wrapper{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        @include media-breakpoint-down(lg){
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        @include media-breakpoint-down(md){
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        @include media-breakpoint-down(sm){
+          padding: {
+            left: 10px;
+            right: 10px;
+          }
+          margin: 20px 0;
+        }
+        @include media-breakpoint-down(xs){
+          padding: {
+            left: 0px;
+            right: 0px;
+          }
+          margin: 20px 0;
+        }
+        h2{
+          font-family: $font-regular;
+          font-size: 24px;
+          font-weight: 600;
+          color: $bg-primary;
+          text-align: center;
+          @include media-breakpoint-down(lg){
+            font-size: 22px;
+          }
+          @include media-breakpoint-down(md){
+            font-size: 22px;
+          }
+          @include media-breakpoint-down(sm){
+            font-size: 17px;
+            font-weight: 700;
+          }
+        }
+        .covid-new-policy-link{
+          position: relative;
+          text-align: center;
+          .covid-new-policy-text{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: $font-regular;
+            font-size: 20px;
+            font-weight: 400;
+            color: white;
+            line-height: 1.1;
+            max-height: 175px;
+            overflow: hidden;
+            @include media-breakpoint-down(sm){
+              font-size: 16px;
+              top: 15%;
+              left: 45%;
+            }
+          }
+        }
+        .btn-secondary{
+          font-family: $font-regular;
+          font-size: 20px;
+          font-weight: normal;
+          width: auto;
+          //background: #da612b;
+          outline: none;
+          padding: 1rem 3rem;
+        }
+      }
+    }
+  }
+}
+
+
+.helping-travel{
+  .row{
+    .card-wrapper{
+      .card{
+        border:0;
+        @include media-breakpoint-down(sm){
+          padding: .8rem;
+        }
+        a{
+          box-sizing: inherit;
+          max-height: 13rem; //IE issue fix in anchor tag
+          @include media-breakpoint-down(lg){
+            max-height: 13rem;
+          }
+          @include media-breakpoint-down(md){
+            max-height: 10rem;
+          }
+          @include media-breakpoint-down(xs){
+            max-height: 13rem;
+          }
+          .card-img-top{
+            padding: 20px 20px 10px 0;
+            max-block-size: inherit;
+            max-height: 13rem;
+            @include media-breakpoint-down(md){
+              max-height: 10rem;
+            }
+            @include media-breakpoint-down(sm){
+              padding: 10px 0px;
+            }
+            @include media-breakpoint-down(xs){
+              max-height: 13rem;
+            }
+          }
+        }
+        .card-body{
+          padding: 10px 20px 20px 10px;
+          background-color: $travel-card-bg;
+          border-top: 1px solid #c7c7c7;
+          border-bottom: 1px solid #c7c7c7;
+          .card-subtitle{
+            padding-bottom:15px;
+            font-family: $font-regular;
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

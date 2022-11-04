@@ -1,0 +1,352 @@
+.hero-banner.wintersale{
+  padding-top: 0;
+  padding-bottom: 0;
+  * + *{
+    margin-top: initial;
+  }
+  .wrapper{
+    @include media-breakpoint-down-custom(1165px){
+      padding-left: 0;
+    }
+    @include media-breakpoint-down(md){
+      padding-left: 0;
+    }
+  }
+  .hero-message-box{
+    position: relative;
+    width: 100%;
+    max-width: 453px;
+    padding-top: 145px;
+    padding-bottom: 35px;
+    @include media-breakpoint-down(md){
+      max-width: 100%;
+    }
+    @include media-breakpoint-down-custom(340px){
+      padding: {
+        top: 100px;
+        left: 16px;
+        right: 16px;
+      };
+    }
+    span{
+      display: initial;
+      margin: initial;
+      width: initial;
+      float: initial;
+    }
+    .promotion-stripe{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#946239+0,ffc66a+100 */
+      background: #946239; /* Old browsers */
+      background: -moz-linear-gradient(left,  #946239 0%, #ffc66a 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left,  #946239 0%,#ffc66a 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right,  #946239 0%,#ffc66a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#946239', endColorstr='#ffc66a',GradientType=1 ); /* IE6-9 */
+
+
+      img{
+        width: 452px;
+        max-width: 100%;
+      }
+    }
+    .discount-value{
+      font-size: 90px;
+      line-height: 73px;
+      font-weight: 800;
+      position: relative;
+      display: flex;
+      font-family: $font-ciutadella;
+      @include media-breakpoint-down(md){
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+      @include if-ie{
+        height: 90px;
+      }
+      .percentage{
+        font-size: 50px;
+        line-height: 1;
+        @include if-ie{
+          width: auto;
+          margin: 0;
+        }
+      }
+      .off{
+        font-size: 72px;
+        line-height: 80px;
+        margin-left: 10px;
+        display: inline-block;
+        position: relative;
+        align-self: flex-end;
+        @include if-ie{
+          width: auto;
+          margin: 1px 0 0 10px;
+          align-self: flex-start;
+        }
+      }
+      .caveat{
+        font-size: 14px;
+        line-height: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(10px) translateX(15px);
+        width: 14px;
+        height: 14px;
+      }
+    }
+    h3{
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 46px;
+      margin-bottom: 10px;
+      @include media-breakpoint-down-custom(340px){
+        font-size: 40px;
+      }
+      @include if-ie{
+        margin-top: 0;
+      }
+    }
+    .code{
+      color: $white;
+      font-family: $font-ciutadella;
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 16px;
+      display: block;
+      strong{
+        font-weight: 600;
+      }
+    }
+    .button-holder{
+      display: block;
+      .button{
+        margin-top: 0;
+        font-weight: 600;
+        float: none;
+        display: inline-block;
+        @include media-breakpoint-down(sm){
+          padding: 0.5rem 2rem;
+        }
+      }
+    }
+    .discount-note{
+      font-family: $font-regular;
+      font-size: 11px;
+      line-height: 1.2;
+      color: $white;
+      padding: 0;
+      margin-top: 1rem;
+      display: block;
+      @include media-breakpoint-down(md){
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+      a{
+        color: $white;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
+  &.product{
+    float: none;
+    padding: 0;
+    background: #ffd796;
+    overflow: hidden;
+    .wrapper{
+      position: static;
+    }
+    .hero-message-box{
+      position: static;
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      background-color: transparent;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      @include media-breakpoint-down-custom(882px){
+        justify-content: space-between;
+      }
+      @include media-breakpoint-down-custom(646px){
+        flex-wrap: wrap;
+      }
+      .promotion-stripe{
+        width: 58%;
+        position: static;
+        height: 130px;
+        display: block;
+        background: none;
+        top: 0;
+        text-align: left;
+        @include media-breakpoint-down-custom(1024px){
+          width: 56%;
+        }
+        @include media-breakpoint-down-custom(992px){
+          width: 52%;
+        }
+        @include media-breakpoint-down-custom(882px){
+          height: 145px;
+          width: 50vw;
+          display: flex;
+        }
+        @include media-breakpoint-down-custom(646px){
+          width: 100vw;
+          height: 100px;
+          margin-bottom: 0;
+        }
+        @include media-breakpoint-down-custom(400px){
+          margin-bottom: 1rem;
+        }
+        &:after{
+          content: '';
+          left: 0;
+          width: 50vw;
+          height: 130px;
+          position: absolute;
+          border-bottom-right-radius: 130px;
+          background: #946239; /* Old browsers */
+          background: -moz-linear-gradient(left,  #946239 0%, #ffc66a 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left,  #946239 0%,#ffc66a 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right,  #946239 0%,#ffc66a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#946239', endColorstr='#ffc66a',GradientType=1 ); /* IE6-9 */
+          @include media-breakpoint-down-custom(882px){
+            height: 145px;
+            border-bottom-right-radius: 145px;
+            width: 50vw;
+          }
+          @include media-breakpoint-down-custom(646px){
+            width: 100vw;
+            height: 100px;
+            border-bottom-right-radius: 100px;
+          }
+        }
+        img{
+          position: relative;
+          z-index: 2;
+          @include media-breakpoint-down-custom(992px){
+            width: 435px;
+          }
+          @include media-breakpoint-down-custom(882px){
+            margin: auto 0;
+            max-width: 90%;
+          }
+          @include media-breakpoint-down-custom(646px){
+            margin: 0 auto;
+            width: auto;
+            max-width: initial;
+          }
+          @include media-breakpoint-down-custom(400px){
+            max-width: 80%;
+          }
+        }
+      }
+      .title-code{
+        width: 42%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        @include media-breakpoint-down-custom(1024px){
+          width: 44%;
+        }
+        @include media-breakpoint-down-custom(992px){
+          width: 48%;
+        }
+        @include media-breakpoint-down(md){
+          padding: 0 1rem;
+        }
+        @include media-breakpoint-down-custom(882px){
+          width: 50%;
+        }
+        @include media-breakpoint-down-custom(646px){
+          width: 100%;
+          height: 130px;
+          justify-content: center;
+        }
+        @include if-ie{
+          align-items: center;
+          margin: 0;
+        }
+        .discount-value{
+          color: $primary;
+          width: auto;
+          margin: auto 0;
+          @include media-breakpoint-between-custom(646px,882px){
+            width: 100%;
+          }
+          @include if-ie{
+            height: 90px;
+          }
+          .percentage{
+            @include if-ie{
+              width: auto;
+              margin: 0;
+            }
+          }
+          .off{
+            @include if-ie{
+              align-self: flex-start;
+              width: auto;
+              margin: 3px 0 0 0;
+            }
+          }
+        }
+        .code{
+          margin: auto 0;
+          width: 136px;
+          color: $black;
+          font-size: 16px;
+          line-height: 16px;
+          font-family: $font-regular;
+          @include media-breakpoint-down-custom(882px){
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+          @include media-breakpoint-between-custom(646px,882px){
+            width: 100%;
+            text-align: left;
+          }
+          @include media-breakpoint-down-custom(646px){
+            margin-top: auto;
+            margin-bottom: 40px;
+            margin-left: 1rem;
+            width: 100%;
+          }
+        }
+        .discount-note{
+          color: $black;
+          width: calc(100% - 32px);
+          position: absolute;
+          bottom: 8px;
+          transform: translateY(0px);
+          margin-top: 0;
+          font-size: 10px;
+          left: 0;
+          @include media-breakpoint-down(md){
+            text-align: left;
+            left: 16px;
+          }
+          @include media-breakpoint-down-custom(646px){
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+          }
+          @include if-ie{
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

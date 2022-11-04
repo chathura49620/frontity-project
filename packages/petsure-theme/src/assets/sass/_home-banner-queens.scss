@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Palatino Linotype';
+  src: url('../fonts/palatino/PalatinoLinotype-Roman.woff2') format('woff2'),
+  url('../fonts/palatino/PalatinoLinotype-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.sticky-header .siteheader .masthead .main_logo{
+  max-width: 330px !important;
+  @include media-breakpoint-down(md){
+    max-width: 250px !important;
+  }
+  @include media-breakpoint-down(xs){
+    width: calc(100% - 141px) !important;
+    max-width: 230px !important;
+  }
+}
+.siteheader .masthead .header_get_quote .btn-get-quote{
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+  @include media-breakpoint-down-custom('480px'){
+    display: block;
+  }
+}
+.siteheader .masthead .mobile-menu{
+  margin-top: 0;
+}
+.hero-banner{
+  &.home-page{
+    &.queen{
+      font-family: "Palatino Linotype", Serif;
+      text-align: center;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#522367+0,0f0808+100 */
+      background: rgb(82,35,103); /* Old browsers */
+      background: -moz-linear-gradient(top,  rgba(82,35,103,1) 0%, rgba(15,8,8,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(82,35,103,1) 0%,rgba(15,8,8,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(82,35,103,1) 0%,rgba(15,8,8,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#522367', endColorstr='#0f0808',GradientType=0 ); /* IE6-9 */
+
+
+      .hero-summery{
+        padding: {
+          top: 4rem;
+          bottom: 3rem;
+          right: 3rem;
+        };
+        @include media-breakpoint-down(xs){
+          padding-right: 15px;
+        }
+        h2{
+          font-family: "Palatino Linotype", Serif;
+          font-size: 42px;
+          margin-bottom: 10px;
+          margin-top: 0;
+          line-height: 1.2;
+          @include media-breakpoint-down(xs){
+            font-size: 36px;
+          }
+          + p{
+            margin-top: 0;
+          }
+        }
+        p{
+          font-family: "Palatino Linotype", Serif;
+          font-size: 24px;
+          margin-bottom: 1rem;
+          @include media-breakpoint-down(xs){
+            font-size: 22px;
+          }
+        }
+      }
+
+      .bg-image{
+        background: url('../images/queens_banner.jpg') center no-repeat transparent;
+        background-size: cover;
+      }
+    }
+  }
+}

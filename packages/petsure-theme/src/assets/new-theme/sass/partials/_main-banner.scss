@@ -1,0 +1,74 @@
+.main-banner-section {
+  margin: 0 auto;
+  max-width: 1375px;
+  position: relative;
+
+  @media only screen and (min-width: 1366px) and (max-width: 1440px) {
+    max-width: 1450px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    z-index: 2;
+  }
+
+  .main-banner {
+    @include background-image;
+    height: 261px;
+
+    @include media-breakpoint-up(md) {
+      height: 430px;
+    }
+
+    .banner-title-wrapper {
+      .banner-title {
+        font-family: $font-family-base;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 1.82px;
+        text-align: left;
+        //max-width: 384px;
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: $white;
+      }
+      .small-description {
+        font-family: $font-family-base;
+        color: $white;
+        font-size: 36px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .purple-block {
+    padding: 23px 55px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 20px 55px;
+    }
+
+    .banner-title {
+      font-family: $font-family-base;
+      font-weight: 700;
+      font-size: 40px;
+      color: $white;
+      line-height: normal;
+      margin-top: 0;
+    }
+
+    .small-description {
+      font-family: $font-family-base;
+      color: $white;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 20px;
+    }
+    &.mobile {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="staysure-sui-sprite" transform="translate(-87.000000, -62.000000)" fill="#FFFFFF">
+            <path d="M119,90 C119,92.209 117.209,94 115,94 L91,94 C88.791,94 87,92.209 87,90 L87,66 C87,63.791 88.791,62 91,62 L115,62 C117.209,62 119,63.791 119,66 L119,90 Z M115.112,73.463 C115.112,71.46 113.489,69.836 111.487,69.836 L94.483,69.836 C92.481,69.836 90.858,71.46 90.858,73.463 L90.858,83.187 C90.858,85.19 92.481,86.814 94.483,86.814 L111.487,86.814 C113.489,86.814 115.112,85.19 115.112,83.187 L115.112,73.463 L115.112,73.463 Z M100.56,82.428 L100.56,73.294 L107.486,77.861 L100.56,82.428 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

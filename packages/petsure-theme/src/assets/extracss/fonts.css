@@ -1,0 +1,18 @@
+
+
+@font-face {
+    font-family: 'Ciutadella Rounded Bold'; /* Font Family and Weight */
+    src: url('../assets/fonts/CiutadellaRounded-Bd.otf') format("opentype"); /*URL to font*/
+}
+@font-face {
+    font-family: 'Ciutadella Rounded Regular'; /* Font Family and Weight */
+    src: url('../assets/fonts/CiutadellaRounded-Rg.otf') format("opentype"); /*URL to font*/
+}
+@font-face {
+    font-family: 'Ciutadella Rounded Medium'; /* Font Family and Weight */
+    src: url('../assets/fonts/CiutadellaRounded-Md.otf') format("opentype"); /*URL to font*/
+}
+@font-face {
+    font-family: 'Ciutadella Rounded Semi-Bold'; /* Font Family and Weight */
+    src: url('../assets/fonts/CiutadellaRounded-SmBd.otf') format("opentype"); /*URL to font*/
+}

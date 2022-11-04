@@ -1,0 +1,180 @@
+.product-types{
+  hr{
+    border-color: rgba($trip-border-color, 0.3);
+    margin-bottom: 30px;
+  }
+  h2.heading-section{
+    font-size: 24px;
+    font-family: $font-regular;
+    font-weight: 700;
+    color: $dark-color;
+    margin-top: 0;
+    @include media-breakpoint-down(xs){
+      font-size: 20px;
+    }
+  }
+  p.section-description{
+    font-size: 16px;
+    font-family: $font-regular;
+    font-weight: 400;
+    margin-bottom: 26px;
+    margin-top: 10px;
+    color: $dark-color;
+    @include media-breakpoint-down(xs){
+      font-size: 14px;
+    }
+  }
+  .trip-type-carousel{
+    .owl-stage-outer{
+      @include media-breakpoint-down(md){
+        width: calc(100% + 16px);
+      }
+      .owl-stage{
+        @include media-breakpoint-down(md){
+          padding: {
+            left: 0 !important;
+          };
+        }
+        .owl-item{
+          margin: {
+            top: 0;
+          };
+        }
+      }
+    }
+    .owl-nav{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      margin: 0;
+      @include media-breakpoint-down(lg){
+        display: none;
+      }
+      .owl-next, .owl-prev{
+        margin: 0;
+        position: absolute;
+        font-size: 34px;
+        color: #282828;
+        &:hover{
+          color: $bg-primary;
+        }
+        &.disabled{
+          display: none;
+        }
+      }
+      .owl-next{
+        right: 0;
+        transform: translateX(35px);
+      }
+      .owl-prev{
+        left: 0;
+        transform: translateX(-35px);
+      }
+    }
+
+    .owl-scrollbar {
+      margin-top: 15px;
+      margin-bottom: 2.5rem;
+      border-radius: 0;
+      height: 5px;
+      width: 100%;
+      background: rgba($trip-border-color, 0.3);
+      border: none;
+      box-shadow: inset 0 0 10px -9px rgba(30, 30, 30, .4);
+      position: relative;
+      .owl-scroll-handle {
+        height: 5px;
+        width: 5px;
+        border-radius: 0;
+        display: inline-block;
+        background: $dark-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        transform: translateX(-3px);
+        //&:hover {
+        //  transform: scale(2);
+        //  transition: transform .2s ease-in-out;
+        //}
+      }
+      .owl-scroll-progress {
+        background: $dark-color;
+        height: 5px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .product-types-item{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 394px;
+      .product-bg-image{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        object-fit: cover;
+        border-radius: 6px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .thumbnail-overlay{
+        position: relative;
+        z-index: 3;
+        margin: {
+          top: auto;
+          bottom: 0;
+        };
+        padding: 30px;
+        color: $white;
+        background: -moz-linear-gradient(top,  rgba(32,17,74,0) 0%, rgba(32,17,74,0) 10%, rgba(32,17,74,0.9) 99%, rgba(32,17,74,0.9) 100%);
+        background: -webkit-linear-gradient(top,  rgba(32,17,74,0) 0%,rgba(32,17,74,0) 10%,rgba(32,17,74,0.9) 99%,rgba(32,17,74,0.9) 100%);
+        background: linear-gradient(to bottom,  rgba(32,17,74,0) 0%,rgba(32,17,74,0) 10%,rgba(32,17,74,0.9) 99%,rgba(32,17,74,0.9) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0020114a', endColorstr='#e620114a',GradientType=0 );
+        border-radius: 0 0 6px 6px;
+        h5{
+          font-family: $font-regular;
+          font-size: 28px;
+          font-weight: 700;
+          margin-top: 100px;
+        }
+        p{
+          margin-top: 5px;
+          font-family: $font-regular;
+          font-size: 16px;
+          strong{
+            font-weight: 700;
+          }
+        }
+        a.btn{
+          &.btn-trip{
+            margin-top: 14px;
+            font-family: $font-regular;
+            background-color: $trip-color;
+            height: 40px;
+            width: 175px;
+            font-size: 18px;
+            font-weight: 600;
+            outline: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 40px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,386 @@
+
+.promo-box {
+  position: relative;
+  float: left;
+  margin-top: auto;
+  margin-bottom: 0;
+  @include media-breakpoint-down(md){
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  .promo-link {
+    display: block;
+    text-decoration: none;
+    .offer-details {
+      &.black-friday{
+        background: $cyber-monday;
+        color: $white;
+        width: 205px;
+        padding: 15px 10px 5px 10px;
+        @include media-breakpoint-down(md){
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          border: none;
+          justify-content: center;
+          align-items: center;
+          padding: 15px 15px 20px 15px;
+        }
+        @include media-breakpoint-down(xs){
+          padding: 10px 15px;
+        }
+        .main-title{
+          margin-top: 10px;
+          @include media-breakpoint-down(md){
+            width: auto;
+            margin: 0 15px;
+          }
+          @include media-breakpoint-down(xs){
+            width: 52%;
+            margin: 0;
+          }
+        }
+        h3.title{
+          margin: 0;
+          padding: 0;
+          font-size: 45px;
+          line-height: 37px;
+          font-weight: 800;
+          font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+          @include media-breakpoint-down(md){
+            font-size: 49px;
+          }
+          @include media-breakpoint-down(xs){
+            text-align: right;
+            padding-right: 15px;
+          }
+        }
+        h4.title{
+          margin: 0;
+          padding: 0;
+          font-size: 45px;
+          line-height: 37px;
+          font-weight: 800;
+          font-family: "Ciutadella Rounded", Helvetica, Arial, sans-serif;
+          @include media-breakpoint-down(md){
+            font-size: 39.5px;
+            line-height: 32px;
+          }
+          @include media-breakpoint-down(xs){
+            text-align: right;
+            padding-right: 15px;
+          }
+        }
+        .discount-percentage{
+          margin-top: 0;
+          @include media-breakpoint-down(md){
+            width: 150px;
+            margin: 0 10px;
+          }
+          @include media-breakpoint-down(xs){
+            width: 48%;
+            margin: 0;
+          }
+        }
+        .t3{
+          @include media-breakpoint-down(md){
+            width: 100%;
+            justify-content: start;
+            padding: 0;
+          }
+          > .offer{
+            font-size: 105px;
+            width: 105px;
+            @include media-breakpoint-down(md){
+              font-size: 80px;
+              width: 90px;
+            }
+          }
+          > .small-text{
+            position: relative;
+            .sup{
+              font-size: 40px;
+              line-height: 40px;
+              @include media-breakpoint-down(md){
+                font-size: 26px;
+              }
+            }
+            .sub{
+              line-height: 25px;
+              font-size: 55px;
+              @include media-breakpoint-down(md){
+                font-size: 46px;
+                line-height: 15px;
+              }
+            }
+            .caveats{
+              margin: 0;
+              font-size: 18px;
+              font-weight: 500;
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: $white;
+            }
+          }
+        }
+        .t1{
+          font-size: 21px;
+          white-space: nowrap;
+          @include media-breakpoint-down(md){
+            width: 100%;
+            font-size: 18px;
+            padding: 0;
+            line-height: 9px;
+            float: left;
+          }
+        }
+        .term{
+          color: $cyber-monday-text;
+          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+          @include media-breakpoint-down(md){
+            width: 185px;
+            margin: 0 10px;
+            padding: 0;
+          }
+          @include media-breakpoint-down(xs){
+            width: 100%;
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+            margin: 0;
+            margin-top: 10px;
+          }
+          strong, span{
+            display: inline-block;
+            line-height: normal;
+          }
+          strong{
+            white-space: nowrap;
+            font-size: 12px;
+            @include media-breakpoint-down(md){
+              width: 100%;
+            }
+            > span{
+              font-weight: 500;
+              font-size: 12px;
+            }
+          }
+          span{
+            font-weight: 600;
+            @include media-breakpoint-down(md){
+              width: 100%;
+              margin: 0;
+            }
+          }
+        }
+      }
+      //Black Friday End
+
+      .t3 {
+        @include media-breakpoint-down(md) {
+          width: 50%;
+          justify-content: flex-end;
+          float: left;
+          position: relative;
+          padding-right: 1rem;
+        }
+        @include media-breakpoint-down(xs){
+          padding-right: .4rem;
+          width: 46%;
+        }
+      }
+      .t1 {
+        @include media-breakpoint-down(md) {
+          width: 50%;
+          float: right;
+          padding-left: 1rem;
+        }
+        @include media-breakpoint-down(xs){
+          padding-left: .4rem;
+          width: 54%;
+        }
+      }
+      .term {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include media-breakpoint-down(md){
+          justify-content: flex-start;
+          width: 50%;
+          float: right;
+          padding-left: 1rem;
+          margin-top: 5px;
+        }
+        @include media-breakpoint-down(xs){
+          padding-left: .4rem;
+          width: 54%;
+        }
+        span {
+          @include media-breakpoint-down(md) {
+            margin-left: 2rem;
+          }
+          @include media-breakpoint-down(xs){
+            margin-left: .5rem;
+          }
+        }
+      }
+    }
+  }
+  .offer-details {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.black-friday-banner {
+  .mobile-br {
+    display: none;
+    @include media-breakpoint-down(xs) { 
+      display: block
+    }
+  }
+  .black-friday-hero {
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom, #0e0526, #0d0424);
+
+    .promotion {
+      max-width: unset;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      justify-content: center;
+
+      @include media-breakpoint-up(md){
+        padding: 15px 24px;
+
+      }
+      
+      &-details {
+        font-family: $font-ciutadella;
+        display: flex;
+        align-items: center;
+        max-width: 330px;
+        width: 100%;
+        flex-direction: column;
+
+        @include media-breakpoint-up(xs){
+          max-width: unset;
+        }
+
+        @include media-breakpoint-up(md){
+          flex-direction: row;
+          justify-content: space-between;
+
+        }
+
+        &-summery {
+          &--amount {
+            font-weight: 700;
+            background: $white;
+            color: #210d38;
+            letter-spacing: normal;
+            line-height: normal;
+            font-size: 54px;
+            padding: 0 5px;
+
+            @include media-breakpoint-up(sm){
+              font-size: 29px;
+            }
+
+            @include media-breakpoint-up(lg){
+              font-size: 54px;
+            }
+
+            @include ipad-landscape {
+              font-size: 33px;
+            }
+          }
+        }
+
+        &-code-wrapper {
+          margin-top: 18px;
+          @include media-breakpoint-up(md){
+            margin-top: 0;
+          }
+        }
+
+        &-code{
+          margin-top: 0;
+          font-family: $font-ciutadella;
+          text-align: center;
+
+          &--name {
+            font-size: 16px;
+            @include media-breakpoint-up(md) { 
+              font-size: 14px;
+            }
+          }
+          &--block {
+            padding: 0;
+            font-size: 16px;
+            @include media-breakpoint-up(md) { 
+              font-size: 14px;
+            }
+          }
+        }
+
+        &-cta {
+          margin-top: 5px;
+
+          .btn {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 46px;
+            width: 186px;
+            font-size: 24px;
+            @include media-breakpoint-up(md) { 
+              height: 42px;
+              width: 163px;
+              font-size: 21px;
+            }
+          }
+        }
+      } 
+      &-description{
+        text-align: center;
+        width: auto;
+        margin-top: 15px;
+
+        @include media-breakpoint-up(md) { 
+          margin-left: 24px;
+          margin-right: 34px;
+          margin-top: 0;
+        }
+        &-title{
+          font-weight: 700;
+          font-size: 32px;
+          
+          line-height: 1.06;
+          @include media-breakpoint-up(md) { 
+            margin-bottom: 5px;
+            font-size: 29px;
+          }
+        }
+        &-desc {
+          font-size: 16px;
+          margin-bottom: 0;
+          margin-top: 0;
+
+          @include media-breakpoint-up(md) { 
+            font-size: 15px;
+            text-align: left;
+            line-height: normal;
+          }
+        }
+      }
+      
+    }
+  }
+}

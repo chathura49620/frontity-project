@@ -1,0 +1,186 @@
+$offer-bg: #FF7600;
+
+.offer-content{
+  @include media-breakpoint-down(sm){
+    width: 100%;
+  }
+  * + * {
+    margin-top: inherit;
+  }
+  .offer-block{
+    background-color: $offer-bg;
+    width: 224px;
+    padding: 10px 5px 5px 5px;
+    font-family: $font-ciutadella;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      border: 5px solid $offer-bg;
+      background-color: $white;
+      padding: 0;
+    }
+    .offer{
+      font-weight: 800;
+      display: flex;
+      @include media-breakpoint-down(sm){
+        background-color: $offer-bg;
+        align-items: center;
+        padding: 10px 25px;
+      }
+      .number{
+        font-size: 110px;
+        line-height: 72px;
+        padding-left: 8px;
+        @include media-breakpoint-down(md){
+          font-size: 100px;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 54px;
+          line-height: 40px;
+        }
+      }
+      .symbol{
+        font-size: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 36px;
+        flex-direction: column;
+        @include media-breakpoint-down(xs){
+          font-size: 25px;
+          line-height: 20px;
+        }
+        span{
+          width: 100%;
+          small{
+            font-size: 16px;
+            top: -16px;
+            position: relative;
+            right: -3px;
+            @include media-breakpoint-down(xs){
+              top: -5px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .details-wrapper{
+      background: $white;
+      padding: 5px 10px;
+      @include media-breakpoint-down(sm){
+        padding-left: 1rem;
+      }
+      @include media-breakpoint-down(xs){
+        padding-left: 0.5rem;
+      }
+    }
+    .title{
+      font-size: 44px;
+      line-height: 36px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: $offer-bg;
+      @include media-breakpoint-down(sm){
+        margin-bottom: 0;
+        font-size: 30px;
+        line-height: 30px;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 26px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 340px) {
+        font-size: 21px;
+      }
+      > span{
+        &.small{
+          font-size: 55px;
+          line-height: 38px;
+          @include media-breakpoint-down(sm){
+            font-size: 55px;
+            line-height: normal;
+          }
+          @include media-breakpoint-down(xs){
+            font-size: 30px;
+            line-height: normal;
+          }
+        }
+        &.large{
+          font-size: 81px;
+          line-height: 62px;
+          @include media-breakpoint-down(sm){
+            font-size: 55px;
+            line-height: normal;
+          }
+          @include media-breakpoint-down(xs){
+            font-size: 30px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .code-block{
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-family: $font-regular;
+      @include media-breakpoint-down(sm){
+        padding-top: 0;
+      }
+      @include media-breakpoint-down(xs){
+        padding-top: 0.25rem;
+      }
+      .code{
+        font-size: 13px;
+        color: $black;
+        font-weight: 600;
+        @include media-breakpoint-down(xs){
+          font-size: 12px;
+        }
+      }
+      .date{
+        font-size: 13px;
+        color: $black;
+        font-weight: 600;
+        @include media-breakpoint-down(xs){
+          font-size: 12px;
+        }
+      }
+    }
+    .code-block-full{
+      display: flex;
+      flex-wrap: wrap;
+      font-weight: 700;
+      font-family: $font-regular;
+      @include media-breakpoint-down(sm){
+        padding-top: 0;
+      }
+      @include media-breakpoint-down(xs){
+        padding-top: 0.25rem;
+      }
+      .code{
+        font-size: 13px;
+        color: $black;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        @include media-breakpoint-down(xs){
+          font-size: 12px;
+        }
+      }
+      .date{
+        font-size: 13px;
+        color: $black;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        @include media-breakpoint-down(xs){
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

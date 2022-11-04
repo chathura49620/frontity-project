@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="MyStaysure---Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile---Password-Reset-Confirmation" sketch:type="MSArtboardGroup" transform="translate(-30.000000, -195.000000)" fill="#2C913D">
+            <g id="Sign-In-Form" sketch:type="MSLayerGroup" transform="translate(15.000000, 180.000000)">
+                <g id="Icon-Check" transform="translate(15.000000, 15.000000)" sketch:type="MSShapeGroup">
+                    <path d="M19.7822115,2.47240385 L17.5553365,0.245480769 C17.2917788,-0.0180769231 16.8644231,-0.0180769231 16.6008654,0.245480769 L7.32442308,9.52201923 L3.37894231,5.57663462 C3.11548077,5.31307692 2.68807692,5.31307692 2.42456731,5.57663462 L0.197692308,7.80355769 C-0.0658653846,8.06706731 -0.0658653846,8.49442308 0.197692308,8.75798077 L6.84725962,15.4075 C6.97903846,15.5393269 7.15177885,15.6051923 7.32447115,15.6051923 C7.49721154,15.6051923 7.66995192,15.5393269 7.80168269,15.4075 L19.7822115,3.42677885 C19.9087981,3.30024038 19.9798558,3.12855769 19.9798558,2.94961538 C19.9799038,2.77057692 19.9087981,2.59899038 19.7822115,2.47240385 L19.7822115,2.47240385 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

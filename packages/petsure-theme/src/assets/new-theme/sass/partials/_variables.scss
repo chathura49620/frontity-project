@@ -1,0 +1,92 @@
+$red: #ff0000;
+$body-color: #2a2a2a;
+$primary: #65509c;
+$secondary: #f5723a;
+$success: #20c997;
+$dark: #140a2f;
+$light: #e4e4e4;
+$warning: #f9b000;
+$bg-primary: #522367;
+$white: #ffffff;
+$info: #1da1f2;
+$danger: $red;
+$card-border: #c1c1c1;
+$gray-border: #e8e8e8;
+$primary-title: #522367;
+$light-gray-title: #777777;
+$gray-bg: #f8f8f8;
+$link-hover: #8d38b8;
+$tag-bg: #00a4ad;
+$offer-color: #ea570a;
+$brownish-grey: #606060;
+$action-color: #ef7d0a;
+$card-text-color: #585858;
+$intro-text-color: #464646;
+$mushroom-71: rgba(191, 171, 154, 0.71);
+$refer-friend-color: #8843cc;
+$refer-friend-textcolor: #555555;
+$covid-help-bg: #705aa5;
+$btn-action-bg: #f60;
+$btn-action-outline: #c3540a;
+$black: #000000;
+$card-body-text: #4a4a4a;
+$package-box-border: #c6c6c6;
+$heading-black: #0a0a0a;
+$heading-border: #efefef;
+$check-green: #0f7e0f;
+$content-bg-light: #f2f2f2;
+$content-bg-lightest: #f7f7f7;
+$content-heading: #363636;
+$content-text-light: #484848;
+$url-blue: #1298d3;
+$dove-gray: #606060;
+$dark-silver: #707070;
+$niagara-blue: #0aa4ad;
+$mine-shaft: #282828;
+$kermit-green: #4db700;
+$dark-small-text: #696969;
+$trustpilot-color: #1bb67a;
+$popupBackdrop: #231546;
+$purple: #522067;
+$light-purple: #654e9c;
+$light-purple2: #614d94;
+$orange: #ea5a08;
+$gray: #bababa;
+
+$font-ciutadella: "Ciutadella Rounded";
+
+$font-bold: $font-ciutadella, Arial, Sans-serif;
+$font-semibold: $font-ciutadella, Arial, Sans-serif;
+$font-medium: $font-ciutadella, Arial, Sans-serif;
+$font-title-regular: $font-ciutadella, Arial, Sans-serif;
+$font-regular: "Open Sans", sans-serif;
+
+$font-family-sans-serif: $font-bold;
+$font-family-base: $font-regular;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1120px,
+);
+
+$container-max-widths: (
+  xs: 576px,
+  sm: 767px,
+  md: 991px,
+  lg: 1024px,
+  xl: 1120px,
+);
+
+$card-border-radius: 0;
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+
+$card-border-color: $card-border;
+
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;

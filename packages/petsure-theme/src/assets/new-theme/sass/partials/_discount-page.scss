@@ -1,0 +1,68 @@
+.discount-page {
+  color: $mine-shaft;
+  
+  button:focus {
+    outline: unset !important;
+    box-shadow: unset !important;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family-base;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .desktop {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  .mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .sub-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: $mine-shaft;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 26px;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+
+  %font-12 {
+    font-size: 12px;
+  }
+
+  .bold-part {
+    font-weight: 700;
+  }
+
+  @import "./main-banner";
+  @import "./dealbox";
+  @import "./awards";
+  @import "./information";
+  @import "./reviews-carousel";
+  @import "./faq-block";
+  @import "./purple-block";
+  @import "./footer-description";
+}

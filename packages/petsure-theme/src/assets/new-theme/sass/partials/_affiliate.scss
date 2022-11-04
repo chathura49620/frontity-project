@@ -1,0 +1,165 @@
+.siteheader {
+  .masthead {
+    .sub_logo {
+      margin-left: 2rem;
+      picture {
+        display: block;
+        img {
+          max-height: 84px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+header {
+  &.siteheader {
+    &.affiliate {
+      padding: 2rem 0;
+      * + * {
+        margin-top: inherit;
+      }
+      .masthead {
+        padding: 0;
+        justify-content: center;
+        .header-logos {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.hero-side {
+  color: $white;
+  font-family: $font-bold;
+  &.simple-hero {
+    .hero-summery {
+      padding: 40px 0;
+      @include media-breakpoint-down(xs) {
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      h6 {
+        font-size: 25px;
+      }
+    }
+  }
+  .hero-summery {
+    padding: 46px 0;
+    @include media-breakpoint-up(lg) {
+      min-height: 400px;
+    }
+  }
+  h1 {
+    font-size: 62px;
+    line-height: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    margin-top: 0;
+    @include media-breakpoint-down(md) {
+      font-size: 48px;
+      line-height: 44px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 24px;
+    @include media-breakpoint-down(xs) {
+      padding-left: 25px;
+    }
+    li {
+      font-size: 26px;
+      margin-bottom: 0.5rem;
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: $secondary;
+        margin-right: 16px;
+        margin-left: -35px;
+        position: absolute;
+        @include media-breakpoint-down(xs) {
+          margin-left: -25px;
+        }
+      }
+    }
+  }
+  .btn {
+    &.cta {
+      font-size: 18px;
+      padding: 8px 3rem;
+      line-height: 24px;
+      font-weight: 700;
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        padding: 12px 30px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.hero-side {
+  &.home-page {
+    position: relative;
+    .bg-image {
+      //background: url("../images/splash-screen-min.jpg") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      right: 0;
+      @include media-breakpoint-down(sm) {
+        background-image: none;
+        display: none;
+      }
+    }
+    .hero-container {
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+      .hero-summery {
+        @include media-breakpoint-up(md) {
+          padding-right: 1rem;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 40px 15px;
+          text-align: center;
+        }
+        ul {
+          @include media-breakpoint-down(sm) {
+            text-align: left;
+          }
+        }
+      }
+    }
+    .offer-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      .offer-content {
+        align-self: flex-end;
+      }
+    }
+  }
+}

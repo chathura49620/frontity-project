@@ -1,0 +1,316 @@
+.hero-banner{
+  &.home-page{
+    position: relative;
+    background-color: $primary;
+    padding: 0;
+    margin-bottom: 1.1em;
+    float: none;
+    br{
+      margin-top: initial;
+    }
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      .col-md-6{
+        width: 100%;
+        @include media-breakpoint-up(sm) {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin-top: 0;
+        }
+      }
+    }
+    .container{
+      max-width: 70rem;
+      padding: 0 1rem;
+      margin: 0 auto;
+    }
+    .bg-image{
+      //background: url("../img/summer-sale-min.jpg") no-repeat center;
+      background: url("https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2022/07/19103044/Surfer_RT-min2.jpg") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      right: 0;
+      @include media-breakpoint-down(sm){
+        background-image: none;
+        display: none;
+      }
+    }
+    .hero-container{
+      @include media-breakpoint-down(sm){
+        padding: 0;
+      }
+      .hero-summery{
+        @include media-breakpoint-up(md){
+          padding-right: 1rem;
+        }
+        @include media-breakpoint-down(sm){
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+        }
+        @include media-breakpoint-down(sm){
+          padding: 40px 15px;
+          text-align: center;
+        }
+        ul{
+          @include media-breakpoint-down(sm){
+            text-align: left;
+            display: inline-block;
+            margin: 0 auto;
+          }
+        }
+        a{
+          @include media-breakpoint-down(sm){
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+    .hero-summery{
+      padding: 65px 0 10px 0;
+      .small-link{
+        color: $light-white !important;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: underline;
+        line-height: 2.5;
+        font-family: $font-regular;
+        @include media-breakpoint-down(md){
+          display: block;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+        @include iphone5{
+          font-size: 11px;
+          line-height: 1;
+        }
+      }
+      .small-caveat{
+        font-size: 14px;
+        margin: 6px 0 0 1px;
+        position: absolute;
+        display: inline-block;
+        line-height: normal;
+        @include media-breakpoint-down(xs){
+          margin: 4px 0 0 1px;
+          font-size: 12px;
+        }
+      }
+      &.count-down-text{
+        h1{
+          @include media-breakpoint-down(xs){
+            margin-bottom: 1.5rem;
+          }
+        }
+        .btn.cta{
+          padding: 22px 80px;
+          font-size: 24px;
+          border-radius: 8px;
+          white-space: nowrap;
+          @include media-breakpoint-down(lg){
+            padding: 22px 70px;
+          }
+          @include media-breakpoint-down(md){
+            padding: 22px 60px;
+          }
+          @include media-breakpoint-down(xs){
+            padding: 22px 80px;
+          }
+        }
+        .bottom-text{
+          font-family: $font-regular;
+          margin-top: 2rem;
+          display: block;
+          margin-bottom: 2rem;
+          font-size: 16px;
+          @include media-breakpoint-down(xs){
+            margin-top: 2rem;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+        .count-down-timer{
+          display: flex;
+          margin-top: 0;
+          margin-bottom: 2rem;
+          @include media-breakpoint-down(sm){
+            margin-bottom: 1rem;
+            justify-content: center;
+          }
+          > div{
+            display: flex;
+            margin-top: 0;
+            margin-right: 12px;
+            flex-direction: column;
+            align-items: center;
+            &:last-child{
+              margin-right: 0;
+            }
+            > span{
+              background-color: $white;
+              border-radius: 8px;
+              color: $bg-primary;
+              font-size: 42px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 80px;
+              height: 80px;
+              font-weight: 800;
+              @include media-breakpoint-down(xs){
+                background-color: $primary;
+                border: 1px solid $white;
+                color: $white;
+                width: 70px;
+                height: 70px;
+              }
+            }
+            > small{
+              font-size: 14px;
+              display: block;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+    }
+    h1{
+      font-family: $font-ciutadella;
+      margin-top: 0;
+      font-size: 57px;
+      line-height: 1;
+      margin-bottom: 34px;
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+        line-height: 1;
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 42px;
+        line-height: 1;
+      }
+      @include iphone5{
+        font-size: 38px;
+      }
+    }
+    h2{
+      font-family: "Open Sans",Helvetica,Arial,sans-serif;
+      font-size: 30px;
+      margin-bottom: 34px;
+      @include media-breakpoint-down(md){
+        font-size: 35px;
+        line-height: 44px;
+        margin-top: 0.5rem;
+      }
+      @include media-breakpoint-down(xs){
+        font-size: 26px;
+        line-height: 36px;
+        margin-top: 0;
+      }
+    }
+    ul{
+      list-style: none;
+      margin-bottom: 34px;
+      font-family: $font-ciutadella;
+      margin-top: 0;
+      padding-left: 35px;
+      @include media-breakpoint-down(xs){
+        padding-left: 25px;
+      }
+      li{
+        font-family: "Open Sans",Helvetica,Arial,sans-serif;
+        font-size: 21px;
+        margin-bottom: 0.5rem;
+        @include media-breakpoint-down(md){
+          font-size: 21px;
+          margin-bottom: 0.25rem;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 16px;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &:before{
+          content: '\f00c';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          color: $cyber-monday;
+          margin-right: 16px;
+          margin-left: -35px;
+          position: absolute;
+          @include media-breakpoint-down(xs){
+            margin-left: -25px;
+          }
+
+        }
+      }
+    }
+    .count-down-timer{
+      display: flex;
+      > div{
+        display: inline-flex;
+        margin-right: 12px;
+        text-align: center;
+        > span{
+          background-color: $white;
+          border-radius: 5px;
+          color: $bg-primary;
+          font-size: 30px;
+        }
+        > small{
+          font-size: 12px;
+        }
+      }
+    }
+    .btn{
+      &.cta{
+        font-size: 24px;
+        padding: 16px 55px;
+        line-height: 24px;
+        font-weight: 700;
+        @include media-breakpoint-down(md){
+          font-size: 20px;
+          padding: 12px 30px;
+          line-height: 20px;
+        }
+        @include ipad-portrait{
+          max-width: 240px;
+        }
+      }
+    }
+    .offer-wrapper{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      z-index: 1;
+      @include media-breakpoint-down(sm){
+        display: block;
+        z-index: 1;
+        background-color: $white;
+        padding: 1rem;
+      }
+      &.desktop-offer{
+        @include media-breakpoint-down(sm){
+          display: none !important;
+        }
+      }
+      &.mobile-offer{
+        @include media-breakpoint-up(sm){
+          display: none !important;
+        }
+      }
+      .offer-content{
+        align-self: flex-end;
+      }
+    }
+  }
+}
+@import "offer-block";

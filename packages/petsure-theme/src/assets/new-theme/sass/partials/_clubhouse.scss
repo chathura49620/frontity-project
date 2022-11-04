@@ -1,0 +1,907 @@
+.hero-section{
+  &.clubhouse-bg{
+    background-size: cover;
+    min-height: 500px;
+    @include media-breakpoint-down(xs){
+      height: auto;
+    }
+    .hero-image{
+      width: 100%;
+      height: 100%;
+      background: url('../images/clubhouse_image.jpg') no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      @include media-breakpoint-down(xs){
+        position: static;
+        height: 165px;
+        display: none;
+      }
+    }
+    .hero-caption{
+      max-width: 673px;
+      @include media-breakpoint-down(sm){
+        max-width: 100%;
+      }
+      .tour-summery{
+        padding: 35px;
+        @include media-breakpoint-down(sm){
+          text-align: center;
+        }
+        h1{
+          @include media-breakpoint-down(xs){
+            font-size: 30px;
+          }
+        }
+        p{
+          font-family: $font-regular;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  &.column-images{
+    background: $primary;
+    height: auto;
+    @include media-breakpoint-down(sm){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &.column-shaded{
+    background: $primary;
+    height: auto;
+    @include media-breakpoint-down(sm){
+      display: flex;
+      flex-wrap: wrap;
+    }
+    > .container{
+      position: relative;
+      z-index: 1;
+      .hero-details{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#65509c+0,65509c+100&1+0,1+80,0+100 */
+        background: -moz-linear-gradient(left,  rgba(101,80,156,1) 0%, rgba(101,80,156,1) 80%, rgba(101,80,156,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(101,80,156,1) 0%,rgba(101,80,156,1) 80%,rgba(101,80,156,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(101,80,156,1) 0%,rgba(101,80,156,1) 80%,rgba(101,80,156,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65509c', endColorstr='#0065509c',GradientType=1 ); /* IE6-9 */
+        margin: 0;
+        padding: 3rem 10% 3rem 0;
+        max-width: 80%;
+        text-align: left;
+        @include media-breakpoint-down(sm){
+          max-width: 100%;
+          padding: 2rem 1rem;
+          justify-content: center;
+        }
+        h4{
+          font-size: 28px;
+          font-family: $font-ciutadella;
+          font-weight: 800;
+          margin-bottom: 0;
+          line-height: 28px;
+        }
+        h1.title{
+          font-size: 58px;
+          font-family: $font-ciutadella;
+          font-weight: 800;
+          line-height: 58px;
+          margin-bottom: 1.5rem;
+          @include media-breakpoint-down(sm){
+            font-size: 40px;
+            line-height: 40px;
+          }
+        }
+        h5{
+          font-size: 24px;
+          font-family: $font-ciutadella;
+          @include media-breakpoint-down(sm){
+            text-align: center;
+          }
+        }
+        p{
+          font-size: 18px;
+          font-family: $font-ciutadella;
+          font-weight: 400;
+          line-height: 1.4;
+          margin-bottom: 2rem;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          @include media-breakpoint-down(sm){
+            display: none;
+          }
+        }
+      }
+    }
+    > .hero-banner{
+      width: 45%;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+    }
+  }
+  > .container{
+    @include media-breakpoint-down(sm){
+      order: 2;
+    }
+  }
+  .hero-details{
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    color: $white;
+    @include media-breakpoint-down(sm){
+      margin: 2rem auto;
+      max-width: 80%;
+    }
+    h2.title{
+      font-family: $font-semibold;
+      font-size: 38px;
+      font-weight: 600;
+      @include media-breakpoint-down(md){
+        font-size: 28px;
+      }
+    }
+    p {
+      font-family: $font-regular;
+      font-size: 1.1rem;
+      line-height: 28px;
+      font-weight: 500;
+      @include media-breakpoint-down(md) {
+        line-height: normal;
+        font-size: 0.875rem;
+      }
+      strong{
+        font-weight: 700;
+      }
+    }
+    &.left-aligned{
+      max-width: 60%;
+      margin: 3rem 0;
+      padding-right: 2rem;
+      @include media-breakpoint-down(md){
+        max-width: 50%;
+      }
+      @include media-breakpoint-down(sm){
+        margin: 2rem 0;
+        max-width: 100%;
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      h2{
+        @include media-breakpoint-down(sm){
+          text-align: center;
+        }
+      }
+      p{
+        margin-top: 1rem;
+        @include media-breakpoint-down(sm){
+          text-align: center;
+        }
+      }
+      .btn-bold{
+        @include media-breakpoint-down(sm){
+          margin: 0 auto;
+          float: none;
+        }
+      }
+    }
+  }
+  .hero-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-position: center;
+    @include media-breakpoint-down(md){
+      width: 50%;
+    }
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      position: relative;
+      order: 1;
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+    }
+    .banner-caption{
+      padding: 21px 34px;
+      background: rgba($bg-primary,0.9);
+      color: $white;
+      position: absolute;
+      z-index: 2;
+      max-width: 428px;
+      font-family: $font-regular;
+      font-weight: 600;
+      font-size: 14px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: auto;
+      bottom: 38px;
+      text-align: center;
+      @include media-breakpoint-down(md){
+        max-width: 90%;
+      }
+      @include media-breakpoint-down(xs){
+        position: relative;
+        width: 100%;
+        left: auto;
+        margin: 0;
+        bottom: auto;
+        right: auto;
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+.video-intro{
+  .blockquote{
+    p{
+      font-size: 1rem;
+      line-height: 2rem;
+      @include media-breakpoint-down(sm){
+        line-height: 1.4rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .image-holder{
+    ul{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+      li{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        @include media-breakpoint-down(sm){
+          width: 50%;
+          display: inline-block;
+        }
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+.testimonials{
+  .blockquote{
+    p{
+      font-size: 1rem;
+      line-height: 2rem;
+      @include media-breakpoint-down(sm){
+        line-height: 1.4rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  blockquote{
+    font-family: $font-ciutadella;
+    p{
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      font-style: italic;
+      @include media-breakpoint-down(sm){
+        line-height: 1.4rem;
+        font-size: 1rem;
+      }
+    }
+    cite{
+      font-style: normal;
+      font-size: 1.1rem;
+    }
+  }
+  .image-holder{
+    ul{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+      li{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        @include media-breakpoint-down(sm){
+          width: 50%;
+          display: inline-block;
+        }
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .container{
+    position: relative;
+  }
+  .testimonial-carousel{
+    @include media-breakpoint-down(md){
+      width: calc(100% - 92px);
+      margin: 0 auto;
+    }
+    .owl-stage-outer{
+      .owl-stage{
+        .owl-item{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .carousel-nav{
+    display: flex;
+    margin-bottom: 2rem;
+    @include media-breakpoint-down(md){
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+    .owl-nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      width: calc(100% + 72px);
+      margin-left: -51px;
+      margin-top: -18px;
+      @include media-breakpoint-down(md){
+        width: calc(100% - 30px);
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        margin-left: 0;
+      }
+      .owl-prev, .owl-next{
+        background: $primary;
+        color: $white;
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        cursor: pointer;
+        margin-top: 0;
+        &.disabled{
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  .image-grid{
+    display: flex;
+    justify-content: center;
+    //max-height: 280px;
+    @media screen and (min-width: 1921px){
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    @include media-breakpoint-down(xs){
+      flex-wrap: wrap;
+      max-height: initial;
+    }
+    img{
+      object-fit: cover;
+      width: 25%;
+      @include media-breakpoint-down(xs){
+        width: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+.tour-schedule{
+  &.giveaways{
+    .carousel-schedule{
+      .card.item{
+        .card-body{
+          .item-logo{
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .location{
+            font-weight: 600;
+            color: $light-gray-title;
+          }
+          .date{
+            font-size: 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            padding-bottom: 1rem;
+          }
+          .name{
+            font-size: 1rem;
+            font-weight: 600;
+          }
+          .sub-section{
+            font-size: 1rem;
+            font-weight: 600;
+            color: lighten($light-gray-title,15%);
+          }
+          .tour-logo{
+            width: auto;
+            margin: 0 auto;
+            height: 68px;
+          }
+          .giveaway-logo{
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .fees-table{
+            margin-top: 1.5rem;
+            table.table{
+              font-family: $font-ciutadella;
+              tr{
+                th,td{
+                  padding: 0;
+                }
+                th{
+                  font-size: 1rem;
+                  line-height: 1.2rem;
+                  font-weight: 500;
+                }
+                td{
+                  font-size: 1.6rem;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .carousel-nav{
+      .read-more{
+        margin: 2rem auto;
+        @include media-breakpoint-down(md){
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
+.clubhouse-form{
+  h3.section-title{
+    font-family: $font-title-regular;
+    font-size: 28px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    @include media-breakpoint-down(sm){
+      margin-bottom: 2rem;
+    }
+  }
+  .form-group{
+    .col-form-label{
+      font-size: 18px;
+      font-family: $font-regular;
+      @include media-breakpoint-down(sm){
+        font-size: 16px;
+      }
+    }
+    .form-control{
+      height: 50px;
+      line-height: 50px;
+      @include media-breakpoint-down(sm){
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  hr{
+    border-top: 1px solid rgba($white,0.5);
+    margin: 2rem 0;
+  }
+  .event-col{
+    width: 100%;
+    @include media-breakpoint-up(sm){
+      max-width: 250px;
+    }
+  }
+  .form-check{
+    label{
+      margin-bottom: 1.5rem;
+      p{
+        margin-bottom: 0;
+      }
+      p.date{
+        font-size: 0.875rem;
+        margin-top: 0.3rem;
+        color: rgba($white, 0.5);
+      }
+    }
+    .wpcf7-form-control-wrap{
+      .wpcf7-form-control{
+        span.wpcf7-list-item{
+          margin-left: 0;
+          > input[type=checkbox]{
+            margin-left: 0;
+          }
+        }
+      }
+      + label.form-check-label{
+        margin-left: 24px;
+      }
+    }
+  }
+  .form-action{
+    .wpcf7-submit.btn-lg{
+      float: none;
+      margin: 0 auto;
+      padding: .5rem 7rem;
+      line-height: 1.5;
+    }
+  }
+  span.wpcf7-not-valid-tip{
+    display: inline-block;
+  }
+  div.wpcf7-mail-sent-ng{
+    background: lighten($red, 10%);
+    color: $white;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+  }
+  div.wpcf7-mail-sent-ok{
+    background: $success;
+    color: $white;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+  }
+  form{
+    margin-top: 0;
+    .form-group.row{
+      > .col-sm-8{
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//.wpcf7{
+//  form.wpcf7-form{
+//    .form-check{
+//      .form-check-input{
+//        content: '';
+//        width: 24px;
+//        height: 24px;
+//        background-color: $white;
+//        border: 1px solid $card-border;
+//        position: absolute;
+//        margin-left: -35px;
+//        margin-top: 5px;
+//
+//        -webkit-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+//        -moz-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+//        -o-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+//        transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+//        &:checked{
+//          + .form-check-label{
+//            &:before{
+//              content: '\f00c';
+//              background-color: $success;
+//              border: 1px solid $white;
+//              font-family: 'Font Awesome 5 Free';
+//              font-weight: 900;
+//              text-align: center;
+//              line-height: 24px;
+//              font-size: 0.75rem;
+//            }
+//          }
+//        }
+//      }
+//    }
+//    .btn.btn-lg{
+//      float: none;
+//      margin: 0 auto;
+//    }
+//  }
+//}
+
+.table-section{
+  > .container{
+    position: relative;
+    .ellipse {
+      position: absolute;
+      right: -30px;
+      top: 50px;
+      @include media-breakpoint-down(lg){
+        right: -20px;
+        transform: scale(0.8) rotate(20deg);
+        bottom: -45px;
+        top: auto;
+      }
+      @include media-breakpoint-down(md){
+        right: -25px;
+        transform: scale(0.7) rotate(20deg);
+        bottom: -45px;
+      }
+      @include media-breakpoint-down(sm){
+        left: -15px;
+        transform: scale(0.7) rotate(20deg);
+        bottom: -35px;
+      }
+      @include media-breakpoint-down(xs){
+        left: -25px;
+        transform: scale(0.7) rotate(20deg);
+        bottom: -55px;
+      }
+    }
+  }
+  .ellipse {
+    width: 87px;
+    height: 87px;
+    border-radius: 100%;
+    background-color: #ef7d0a;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-ciutadella;
+    font-weight: 800;
+    flex-wrap: wrap;
+    line-height: 1.3;
+    text-align: center;
+    transform: rotate(20deg);
+    z-index: 3;
+    p{
+      margin: 0;
+    }
+    small{
+      display: block;
+      text-align: center;
+      font-size: 11.5px;
+      width: 100%;
+      line-height: 11.5px;
+    }
+    span{
+      display: block;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+  h2{
+    font-family: $font-ciutadella;
+    font-size: 33px;
+    font-weight: 800;
+    color:$primary;
+    padding-right: 50px;
+    padding-left: 18px;
+    @include media-breakpoint-down(xs){
+      font-size: 24px;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  .d-table-row{
+    align-items: center;
+    @include media-breakpoint-down(xs){
+      position: relative;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      border: 1px solid $card-border;
+      border-bottom: none;
+    }
+    &.headers{
+      position: relative;
+      @include media-breakpoint-down(xs){
+        border: none;
+      }
+      h2{
+        display: block;
+        @include media-breakpoint-down(md){
+          font-size: 24px;
+          padding-right: 0;
+        }
+        @include media-breakpoint-down(sm){
+          font-size: 24px;
+        }
+        @include media-breakpoint-down(xs){
+          font-size: 26px;
+        }
+      }
+      .d-table-cell{
+        padding: 0;
+        border: none;
+        vertical-align: bottom;
+        padding-bottom: 2px;
+        &.icon{
+          @include media-breakpoint-down(xs){
+            display: none;
+          }
+        }
+        &.description{
+          @include media-breakpoint-down(xs){
+            display: block;
+            width: 100%;
+          }
+        }
+        &.features{
+          h3{
+            font-family: $font-ciutadella;
+            font-weight: 700;
+            margin-bottom: 0;
+            @include media-breakpoint-down(xs){
+              font-size: 1.5rem;
+            }
+          }
+          .subtitle{
+            font-family: $font-ciutadella;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            display: block;
+            color: $brownish-grey;
+            font-style: italic;
+            @include media-breakpoint-down(xs){
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+    > .d-table-cell{
+      vertical-align: middle;
+      border: 1px solid $card-border;
+      border-left: none;
+      padding: 18px 15px;
+      height: 72px;
+      border-bottom: 0;
+      @include media-breakpoint-down(xs){
+        height: auto;
+        border-bottom: none;
+      }
+      &.icon{
+        width: 50px;
+        color: $primary-title;
+        border-width: 0;
+        border-right-width: 1px;
+        @include media-breakpoint-down(xs){
+          width: 15%;
+          border-right-width: 0;
+        }
+        .fa{
+          font-size: 21px;
+        }
+      }
+      &.description{
+        width: auto;
+        @include media-breakpoint-down(xs){
+          width: 85%;
+          border-top: none;
+        }
+        h4{
+          font-family: $font-ciutadella;
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 1;
+          margin: 0;
+        }
+        p{
+          font-family: $font-ciutadella;
+          font-weight: 400;
+          font-size: 16px;
+          margin: 0;
+          line-height: 1;
+        }
+        .golf-tour-icon{
+          margin-left: 2rem;
+          @include media-breakpoint-down(sm){
+            margin-left: 0;
+          }
+          @include media-breakpoint-down(xs){
+            margin-left: 2px;
+          }
+          img{
+            @include media-breakpoint-down(xs){
+              max-width: 80px;
+            }
+          }
+        }
+      }
+      &.features{
+        width: 165px;
+        text-align: center;
+        @include media-breakpoint-down(md){
+          width: 100px;
+        }
+        @include media-breakpoint-down(xs){
+          width: 50%;
+          height: 68px;
+        }
+        .fa-check{
+          font-size: 28px;
+          color: $brownish-grey;
+          @include media-breakpoint-down(sm){
+            font-size: 20px;
+          }
+        }
+      }
+      .border-par{
+        background: $primary;
+        min-height: 11px;
+        width: 100%;
+        display: block;
+      }
+      .border-birdie{
+        background: $bg-primary;
+        min-height: 11px;
+        width: 100%;
+        display: block;
+        border-left: 1px solid $white;
+      }
+    }
+    &.last-section{
+      > .d-table-cell:not(.icon){
+        border-bottom: 1px solid $card-border;
+        @include media-breakpoint-down(xs){
+          border-bottom: none;
+        }
+      }
+    }
+    &.last-row{
+      @include media-breakpoint-down(xs){
+        border: none;
+      }
+      > .d-table-cell{
+        border: none;
+        padding: 0;
+        .border-par{
+          height: 68px;
+          color: $white;
+          font-family: $font-ciutadella;
+          font-size: 20px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .border-birdie{
+          height: 68px;
+          color: $white;
+          font-family: $font-ciutadella;
+          border-left: 1px solid $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p.price{
+            font-size: 24px;
+            margin-bottom: 0;
+            line-height: 1;
+            font-family: $font-ciutadella;
+            font-weight: 600;
+            sup{
+              font-size: 17px;
+              top: 0;
+            }
+          }
+          small{
+            font-size: 13px;
+            display: block;
+          }
+        }
+        .btn-block{
+          @include media-breakpoint-down(xs){
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

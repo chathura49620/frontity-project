@@ -1,0 +1,43 @@
+@include keyframes(messageAnimate){
+  0%   { transform: translateY(-35px); }
+  100% { transform: translateY(0); }
+}
+
+body{
+  > .special-message{
+    background-color: #fff06d;
+    color: $black;
+    font-size: 14px;
+    padding: 0.3em 0.3em 0.5em;
+    height: auto;
+    line-height: 26px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: $font-regular;
+    z-index: 9999;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    text-decoration: none;
+    animation: messageAnimate 1s forwards;
+    transition: top 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    @include media-breakpoint-down(xs){
+      font-size: 12px;
+      line-height: 21px;
+    }
+    > a{
+      color: blue;
+      text-decoration: underline;
+      display: inline-block;
+      margin: 0;
+    }
+    + .sticky-header{
+      padding-top: 50px;
+      transition: padding-top 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    }
+    + iframe + .sticky-header{
+      padding-top: 50px;
+    }
+  }
+}

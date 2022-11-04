@@ -1,0 +1,104 @@
+$offer-bg: #FF7600;
+.offer-wrapper {
+  * + * {
+    margin-top: inherit;
+  }
+  .offer-block-sm{
+    border: 3px solid $offer-bg;
+    text-align: center;
+    .offer-title{
+      background-color: $offer-bg;
+      padding: 15px 10px;
+      img{
+        max-width: 274px;
+      }
+    }
+    .offer-description{
+      font-family: $font-ciutadella;
+      padding-bottom: 10px;
+      .offer-amount{
+        padding: 12px 0;
+        img{
+          max-width: 200px;
+        }
+      }
+      .offer-valid{
+        color: $black;
+        .code{
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .duration{
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .st0 {
+    fill: #FF7600;
+  }
+
+  .st1 {
+    fill: #FFFFFF;
+  }
+
+  .st2 {
+    fill: none;
+    stroke: #FF7600;
+    stroke-miterlimit: 10;
+  }
+
+  .st3 {
+    font-family: $font-ciutadella;
+  }
+
+  .st4 {
+    font-size: 41.4127px;
+    font-weight: 600;
+  }
+
+  .st5 {
+    font-family: $font-ciutadella;
+  }
+
+  .st6 {
+    font-size: 33.4421px;
+    font-weight: 400;
+  }
+
+  .st7 {
+    font-size: 26.5539px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .mobile0 {
+    fill: #FF7600;
+  }
+
+  .mobile1 {
+    fill: #FFFFFF;
+  }
+
+  .mobile2 {
+    font-family: $font-ciutadella;
+  }
+
+  .mobile3 {
+    font-size: 17.428px;
+    font-weight: 600;
+  }
+
+  .mobile4 {
+    font-family: $font-ciutadella;
+  }
+
+  .mobile5 {
+    font-size: 14.0737px;
+  }
+}

@@ -1,0 +1,1282 @@
+body .modal-backdrop {
+    margin: 0;
+}
+
+.covid-info-fthide{
+    .sitefooter{
+        display: none;
+    }
+}
+.covid-info-wrapper {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin-top: 0px;
+
+    .wrapper {
+        padding: 0 1em;
+    }
+
+    // Hero banner
+    .hero-side{
+        background-color: $primary;
+        .bg-image{
+            background: url(/wp-content/themes/staysure-wdr/assets/new-theme/images/hero_image_covidinfo.jpg) center no-repeat;
+            background-size: cover;
+            width: 52%;
+        }
+        .hero-container {
+            .hero-summery {
+                min-height: 360px;
+                padding: 0px 0 20px 0;
+                @include media-breakpoint-down(sm){
+                    padding: 0 0 20px 0;
+                }
+                @include media-breakpoint-down(xs){
+                    text-align: center;
+                }
+                .staysurelogo-white {
+                    width: 136px;
+                    @include media-breakpoint-down(sm){
+                        margin-bottom: 18px;
+                        //margin-top: 42px;
+                    } 
+                    @include media-breakpoint-down(xs){
+                        margin-left: 30px;
+                        width: 190px;
+                        margin-top: 5px;
+                        margin-bottom: 21px;
+                        float: left;
+                    }                  
+                }
+                .bg-image-mobile{
+                    display: none;
+                    @include media-breakpoint-down(sm){
+                        display: block;
+                    }
+                }
+                h1 {
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 46px;
+                    font-weight: 700;
+                    margin-top: 54px;
+                    margin-bottom: 4px;
+                    @include media-breakpoint-down(sm){
+                        margin-top: 36px;
+                        margin-bottom: 15px;
+                    } 
+                    @include media-breakpoint-down(xs){
+                        margin-top: 36px;
+                        margin-bottom: 15px;
+                        //padding-left: 33px;
+                    }                   
+                }
+                h2 {
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+                p{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    margin-top: 25px;
+                    margin-bottom: 1rem;
+                    @include media-breakpoint-up(md){
+                        margin-right: 16%;
+                    }
+                    @include media-breakpoint-down(sm){
+                        font-size: 18px;
+                        padding-left: 33px;
+                        padding-right: 33px;
+                        line-height: 26px;                        
+                    } 
+                    @include media-breakpoint-down(xs){
+                        font-size: 18px;
+                        padding-left: 33px;
+                        padding-right: 33px;
+                        line-height: 26px;
+                    } 
+                    strong {
+                        font-weight: 700;
+                    }
+                    .linebreak-desk {
+                        @include media-breakpoint-down(md){
+                            display: none;
+                        }                       
+                    } 
+                }
+                a.cta{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 20px;
+                    margin-top: 10px;
+                    font-weight: bold;
+                    border: none;
+                    outline: none;
+                    border-radius: 3px;
+                    padding: 18px 3rem;
+                    &.hover {
+                        background: $btn-action-bg;
+                    }
+                    @include media-breakpoint-down(sm){
+                        margin-top: 12px;
+                        margin-left: 0px;  
+                        margin-right: 0px;                       
+                    } 
+                    @include media-breakpoint-down(xs){
+                        margin-top: 12px;
+                        margin-left: 0px;  
+                        margin-right: 0px;
+                    }                   
+                }
+                .call-us {
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    margin-bottom: 1rem;
+                    color: $white;
+                    .linebreak-mobile {
+                        display: none;
+                        @include media-breakpoint-down(xs){
+                            display: block;
+                        }
+                    }
+                    a{
+                        color: $white;
+                        font-weight: 700;
+                        text-decoration: none;                                              
+                    }
+                }
+            }
+        }
+    }
+    // Hero banner ends here
+
+    // Trust provider
+    .trustprovider-section {
+        border-bottom: 0px;
+        @include media-breakpoint-down(md){
+            margin: 0px;
+        }
+        .trust-builder{
+            padding: 0;
+            @include media-breakpoint-down(md){
+                padding: 0px;
+            }
+            .wrapper.d-flex{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                @include media-breakpoint-down(md){
+                    flex-direction: column;
+                }               
+                .headline {
+                    float: left;
+                    width: auto;
+                    margin-right: 0;
+                    max-width: 545px;
+                    color: $heading-black;
+                    @include media-breakpoint-up(xl){
+                        min-width: none !important;
+                        max-width: 545px;
+                    }
+                    @include media-breakpoint-up(lg){
+                        min-width: 500px;
+                        max-width: 500px;
+                    }
+                    @include media-breakpoint-down(md){
+                        margin-right: 0;
+                        max-width: 100%;
+                        margin-top: 15px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        font-size: 24px;
+                        margin-top: 15px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 24px;
+                        margin-top: 15px;
+                    }                    
+                    h2{
+                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                        letter-spacing: -0.2px;
+                        font-size: 30px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        color: $heading-black;
+                        @include media-breakpoint-down(sm){
+                            font-size: 24px;
+                            margin-bottom: 0px;
+                        }
+                        @include media-breakpoint-down(xs){
+                            font-size: 24px;
+                            margin-bottom: 0px;
+                        }
+                    }
+                    .sub-text{
+                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                        font-size: 18px;
+                        line-height: 28px;
+                        color: $heading-black;
+                        @include media-breakpoint-down(sm){
+                            font-size: 18px;
+                            float: left;
+                            line-height: 28px;
+                            margin-top: 22px;                            
+                        }
+                        @include media-breakpoint-down(xs){
+                            font-size: 18px;
+                            float: left;
+                            line-height: 28px;
+                            margin-top: 22px;
+                            .linebreak-desk {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .trust-logos{
+                    margin-top: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    //max-width: 450px;
+                    width: calc(100% - 550px);
+                    @include media-breakpoint-down(lg){
+                        width: calc(100% - 502px);
+                    }
+                    @include media-breakpoint-down(md){
+                        width: 100%;
+                    }
+                    @include media-breakpoint-down(xs){
+                        flex-direction: column-reverse;
+                        margin-top: 10px;
+                    }
+                    .owl-carousel {
+                        .owl-item{
+                            @include media-breakpoint-up(xl){
+                                margin-right: 0px !important;
+                                width: 32% !important;
+                                max-width: none !important;
+                            }
+                            @include media-breakpoint-up(lg){
+                                max-width: 156px;
+                            }
+                            @include media-breakpoint-down(md){
+                                text-align: center;
+                            }
+                        }
+                        .owl-nav {
+                            .owl-prev {
+                                position: absolute;
+                                top: 35%;
+                                left: -10px;
+                                @include media-breakpoint-down(xs){
+                                    top: 40%;
+                                    left: -8px;
+                                }  
+                                i {
+                                    padding: 8px 15px;
+                                    background: $white;
+                                    color: $package-box-border;
+                                    border: 1px solid $heading-border;
+                                    border-radius: 50px;
+                                    font-size: 28px;
+                                }
+                            }
+                            .owl-next {
+                                position: absolute;
+                                top: 35%;
+                                right: -10px;
+                                @include media-breakpoint-down(xs){
+                                    top: 40%;
+                                    right: -8px;
+                                }
+                                i {
+                                    padding: 8px 15px;
+                                    background: $white;
+                                    color: $package-box-border;
+                                    border: 1px solid $heading-border;
+                                    border-radius: 50px;
+                                    font-size: 28px;
+                                }
+                            }               
+                        }
+                    }                   
+                    .trust-pilot-placement {
+                        width: 200px;
+                        margin-top: 30px;
+                        text-align: center;
+                        .trustpilot-widget {
+                            border: none;
+                            box-shadow: none;
+                            padding: 0;
+                            margin-top: 15px !important;
+                            margin-left: 26px !important;
+                        }
+                        @include media-breakpoint-down(lg){
+                            width: 180px;
+                        }
+                        @include media-breakpoint-down(md){
+                            width: 160px;
+                            float: none;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @include media-breakpoint-down(sm){
+                            width: 220px !important;
+                        }
+                        
+                                                 
+                    }
+                    .awards-defecto {
+                        width: 140px;
+                        margin-top: 15px;
+                        margin-right: -10px;
+                        float: right;
+                        @include media-breakpoint-down(lg){
+                            width: 130px;
+                        } 
+                        @include media-breakpoint-down(md){
+                            float: none;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @include media-breakpoint-down(xs){
+                            width:160px;
+                        }                        
+                    } 
+                    .awards-bta {
+                        width: 125px;
+                        float: right;
+                        @include media-breakpoint-down(lg){
+                            width: 120px;
+                        }                        
+                        @include media-breakpoint-down(md){
+                            float: none;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @include media-breakpoint-down(xs){
+                            margin-top: 10px;
+                            width:140px;
+                        }                       
+                    }   
+                }
+            }
+        }
+    }
+    // Trust provider ends here
+
+    // Cover policy 
+    .cover-policy {
+        background-color: $content-bg-light;
+        padding-top: 38px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        @include media-breakpoint-down(sm){
+            padding-top: 28px;
+        }
+        @include media-breakpoint-down(xs){
+            padding-top: 28px;
+        }
+        .headline {
+            text-align: center;
+            margin-bottom: 70px;
+            color: $heading-black;
+            @include media-breakpoint-down(sm){
+                margin-bottom: 38px;
+            }
+            @include media-breakpoint-down(xs){
+                margin-bottom: 38px;
+            }
+            h2{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                letter-spacing: -0.2px;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                @include media-breakpoint-down(sm){
+                    font-size: 21px;
+                }
+                @include media-breakpoint-down(xs){
+                    font-size: 21px;
+                }
+                .linebreak-mobile {
+                    display: none;
+                    @include media-breakpoint-down(xs){
+                        display: block;
+                    }
+                }              
+            }
+            .sub-text{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                line-height: 28px;
+                @include media-breakpoint-down(sm){
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+                @include media-breakpoint-down(xs){
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+                .linebreak-desk {
+                    @include media-breakpoint-down(md){
+                        display: none;
+                    }
+                }
+                .linebreak-mobile {
+                    display: none;
+                    @include media-breakpoint-down(xs){
+                        display: block;
+                    }
+                }
+            }
+        }
+        .policy-deskonly{
+            @include media-breakpoint-down(xs){
+                display: none;
+            }
+        }
+        .why-staysure-item{
+            text-align: center;
+            margin-bottom: 40px;
+            @include media-breakpoint-down(sm){
+                border-right: none;
+                padding-top: 5px;
+                margin-bottom: 20px;
+            }
+            @include media-breakpoint-down(xs){
+                border-right: none;
+                padding-top: 5px;
+            }
+            i {
+                font-size: 36px;
+                color: $primary;
+            }
+            h4{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                font-weight:600;
+                color: $black;
+                margin-top: 15px;
+                margin-bottom: 8px;
+            }
+            p{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+                color: $card-body-text;
+            }            
+        }
+        .view-more-wrap {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            .modal {
+                overflow: visible !important; 
+                z-index: 99999;
+                margin-top: 0px;
+                @include media-breakpoint-down(md){
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @include media-breakpoint-down(xs){
+                    padding-left: 5px;
+                    padding-right: 5px !important;
+                }
+                .modal-dialog{
+                    position: relative;
+                    width: auto;
+                    left: auto;
+                    top: auto;
+                    @include media-breakpoint-up(sm){
+                        max-width: 65%;
+                    }
+                    .modal-content {
+                        .modal-header{
+                            border-bottom: none;
+                            height: auto;
+                            padding: 1rem;
+                            background-color: transparent;
+                            align-items: flex-start;
+                            button{
+                                position:relative; 
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 60px;
+                                background-color: $white;
+                                opacity: 1;
+                                border: 1px solid $package-box-border;
+                                margin-top: -30px;
+                                margin-right: -26px;
+                                span{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 7px;
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+                        .modal-body {
+                                .row{
+                                display: inline-block;
+                                width: 100%;
+                                    .why-staysure-item{
+                                    border-right: 1px solid #d3d3d3;
+                                    margin-bottom: 45px;
+                                    float: left;
+                                        &:nth-child(3n) {
+                                        border-right: none;
+                                            @include media-breakpoint-down(md){
+                                            border-right: 1px solid #d3d3d3;
+                                            }
+                                        }
+                                        &:nth-child(2n) {
+                                            @include media-breakpoint-down(md){
+                                            border-right: none;
+                                            }
+                                        }
+                                        @include media-breakpoint-down(lg){
+                                            min-height: 132px;
+                                        }
+                                        @include media-breakpoint-down(sm){
+                                            border-right: none !important;
+                                            margin-bottom: 15px;
+                                        }
+                                        .h4{
+                                            font-weight: 600;
+                                        }
+                                    }
+                                }
+                            }
+                    }
+                }
+                
+            }
+        }
+    }
+    // Cover policy ends here
+
+    // Annual Multi Trip
+    .annual-multi-trip {
+        background-color: $bg-primary;
+        padding: 45px 0;
+        margin-top: 0px;
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        h3 {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            color: $white;
+            font-size: 27px;
+            line-height: 30px;
+            font-weight: 600;
+            @include media-breakpoint-down(sm){
+                line-height: 38px;
+                display: block;
+            }
+            .linebreak-mobile {
+                display: none;
+                @include media-breakpoint-down(xs){
+                    display: block;
+                }
+            } 
+        }
+        p{  
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            color: $white;
+            font-size: 21px;
+            line-height: 30px;
+            @include media-breakpoint-down(sm){
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 10px;
+            }
+            .linebreak-mobile {
+                display: none;
+                @include media-breakpoint-down(xs){
+                    display: block;
+                }
+            } 
+        }
+        a.cta{
+            font-family: "Open Sans",Helvetica,Arial,sans-serif;
+            font-size: 20px;
+            margin-top: 21px;
+            width: 265px;
+            font-weight: 700;
+            border: none;
+            outline: 0;
+            border-radius: 3px;
+            padding: 18px 5px;
+            &.hover {
+                background: $btn-action-bg;
+            }
+            @include media-breakpoint-down(md){
+                margin-top: 24px;
+                margin-bottom: 15px;
+            }
+            @include media-breakpoint-down(sm){
+                margin-top: 24px;
+                margin-bottom: 20px;
+            }
+        }
+        a.terms-co {
+            font-family: "Open Sans",Helvetica,Arial,sans-serif;
+            color: $white;
+            font-size: 16px;
+            text-decoration: underline;
+            width: 100%;
+            @include media-breakpoint-down(sm){
+                font-size: 14px;
+            }
+        }
+    }   
+    // Annual Multi Trip ends here
+
+    // Covid pandemic
+    .covid-pandemic{
+        padding: 45px 0;
+        @include media-breakpoint-down(md){
+            float: left;
+            padding-top: 20px;
+        }
+        @include media-breakpoint-down(sm){
+            padding-top: 0px;
+        }
+        .wrapper{
+            .headline {
+                width: 90%;
+                text-align: left;
+                margin-bottom: 14px;
+                color: $heading-black;
+                @include media-breakpoint-down(md){
+                    width: 100%;
+                }
+                h2{
+                    &:first-child {
+                        margin-top: 0px;
+                    }
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    letter-spacing: -0.2px;
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 25px;
+                    margin-top: 40px;
+                    color: $content-heading;
+                    @include media-breakpoint-down(sm){
+                        font-size: 22px;
+                        margin-bottom: 12px;
+                        float: left;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 22px;
+                        margin-bottom: 12px;
+                    }
+                    .linebreak-mobile {
+                        display: none;
+                        @include media-breakpoint-down(xs){
+                            display: block;
+                        }
+                    }
+                }
+                p{
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $heading-black;
+                    margin-bottom: 1rem;
+                    @include media-breakpoint-down(sm){
+                        font-size: 18px;
+                        float: left;
+                        line-height: 28px;
+                        margin-top: 22px;
+                        margin-bottom: 0px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 18px;
+                        float: left;
+                        line-height: 28px;
+                        margin-top: 22px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        text-decoration: underline;
+                        color: $heading-black;
+                    }
+                    br {
+                        @include media-breakpoint-down(sm){
+                            display: none;
+                        }   
+                    }
+                }                
+            }
+
+        }
+
+    }
+    // Covid pandemic ends here
+
+    // Know Before
+    .know-before {
+        background-color: $niagara-blue;
+        padding: 45px 0;
+        margin-top: 0px;
+        clear: both;
+        @include media-breakpoint-down(sm){
+            padding: 25px 0; 
+        }
+        .wrapper{
+            h3 {
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 25px;
+                color: $white;
+            }
+            .row {
+                flex-direction: row;
+                justify-content: flex-start;
+                margin: 0;
+                padding: 0;
+                flex-wrap: nowrap;
+                list-style: none;
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+                .kb-card {
+                    // display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    width: 33.33333%;
+                    background-color: $white;
+                    padding: 25px;
+                    margin-right: 15px;
+                    border-radius: 5px;
+                    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+                    -moz-box-shadow:    0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+                    box-shadow:         0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+                    @include media-breakpoint-down(sm){
+                        width: 100%;
+                        margin-right: 0px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        color: $mine-shaft;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 0px;
+                        @include media-breakpoint-down(sm){
+                            font-size: 17px;
+                            line-height: 28px;
+                        }
+                        a{
+                            color: $mine-shaft;
+                            text-decoration: underline;
+                        }
+                    }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                }
+            }
+        }        
+    }
+    // Know Before ends here
+
+    // Medical claim
+    .medical-claim {
+        padding: 60px 0px;
+        @include media-breakpoint-down(md){
+            padding: 48px 0
+        }
+        @include media-breakpoint-down(sm){
+            padding-top: 0px;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            //align-items: center;
+            justify-content: space-between;
+            @include media-breakpoint-down(sm){
+                flex-direction: column-reverse;
+                padding: 0px;
+            }
+            @include media-breakpoint-down(xs){
+            }
+            .headline {
+                width: 48%;
+                text-align: left;
+                margin-bottom: 14px;
+                color: $heading-black;
+                @include media-breakpoint-down(md){
+                    width: 58%;
+                }
+                @include media-breakpoint-down(sm){
+                    width: 100%;
+                    margin-bottom: 0px;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+                @include media-breakpoint-down(xs){
+                    width: 100%;
+                    margin-bottom: 0px;
+                }
+                h2{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    letter-spacing: -0.2px;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 25px;
+                    color: $content-heading;
+                    @include media-breakpoint-down(sm){
+                        font-size: 24px;
+                        margin-bottom: 12px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 24px;
+                        margin-bottom: 12px;
+                    }
+                    .linebreak-mobile {
+                        display: none;
+                        @include media-breakpoint-down(xs){
+                            display: block;
+                        }
+                        @media (max-width: 360px){
+                            display: none;
+                        }
+                    }
+                }
+                p{
+                    margin-bottom: 1rem;
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 18px;
+                    line-height: 34px;
+                    color: $content-text-light;
+                    @include media-breakpoint-down(sm){
+                        font-size: 18px;
+                        float: left;
+                        line-height: 28px;
+                        margin-top: 22px;
+                        margin-bottom: 0px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 18px;
+                        float: left;
+                        line-height: 28px;
+                        margin-top: 22px;
+                        margin-bottom: 0px;
+                    }
+                    a{
+                        text-decoration: underline;
+                        color: $mine-shaft;
+                    }
+                }                
+            }
+            .statistics-sec {
+                background-color: $bg-primary;
+                width: 425px;
+                //height: 425px;
+                padding: 30px 20px 20px 20px;
+                color: $white;
+                border-radius: 5px;
+                text-align: center;
+                @include media-breakpoint-down(md){
+                    width: 40%;
+                    height: auto;
+                    padding: 30px;
+                }
+                @include media-breakpoint-down(sm){
+                    width: 100%;
+                    padding: 15px;
+                    text-align: center;
+                    margin-bottom: 37px;
+                    border-radius: 0px;
+                }
+                @include media-breakpoint-down(xs){
+                    width: 100%;
+                    padding: 15px;
+                    text-align: center;
+                }
+                h1{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 100px;
+                    //line-height: 105px;
+                    font-weight: 600;
+                    line-height: 80px;
+                    padding-top: 15px;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                    @include media-breakpoint-down(sm){
+                        margin-bottom: 0px;
+                        line-height: 80px;
+                        font-weight: 900;
+                    }
+                    span {
+                        font-size: 70px;
+                    }
+                    .linebreak-mobile {
+                        display: none;
+                        @include media-breakpoint-down(sm){
+                            display: block;
+                        }
+                    }
+                }
+                h3{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 22px;
+                    margin-bottom: 25px;
+                    @include media-breakpoint-down(sm){
+                        margin-bottom: 0px;
+                    }
+                }
+                h2{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 27px;
+                    line-height: 38px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    @include media-breakpoint-down(sm){
+                        font-size: 26px;
+                        padding-top: 20px;
+                        line-height: 35px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        font-size: 26px;
+                        padding-top: 20px;
+                        line-height: 35px;
+                    }
+                }
+                hr {
+                    @include media-breakpoint-down(sm){
+                        margin: 0px 18px;
+                    }
+                    @media (max-width: 360px){
+                        margin: 0px 10px;
+                    }
+                }
+                p{
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 12px;
+                    padding-top: 10px;
+                    margin-bottom: 1rem;
+                    @include media-breakpoint-down(sm){
+                        margin-right: 0px;
+                        font-size: 11px;
+                    }
+                    @include media-breakpoint-down(xs){
+                        margin-right: 0px;
+                    }
+                    span {
+                        @include media-breakpoint-down(sm){
+                            font-weight: 600;
+                        }
+                        @include media-breakpoint-down(xs){
+                            font-weight: 600;
+                        } 
+                    }                   
+                }
+            }
+        }
+    }
+    // Medical claim ends here
+
+    // Get Quote
+    .get-quote-sec {
+        background-color: $heading-border;
+        padding: 45px 0 20px;
+        text-align: center;
+        @include media-breakpoint-down(sm){
+            padding-bottom: 20px;
+        }
+        @include media-breakpoint-down(xs){
+            padding-bottom: 20px;
+        }
+        h1{
+            font-family: "Open Sans",Helvetica,Arial,sans-serif;
+            font-size: 32px;
+            line-height: 43px;
+            font-weight: 700;
+            margin-top: 0px;
+            color: $content-heading;
+            margin-bottom: 22px;
+            @include media-breakpoint-down(sm){
+                font-size: 24px;
+                line-height: 33px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            @include media-breakpoint-down(xs){
+                font-size: 24px;
+                line-height: 33px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .linebreak-desk {
+                @include media-breakpoint-down(md){
+                    display: none;
+                }
+            }
+            .linebreak-mobile {
+                display: none;
+                @include media-breakpoint-down(xs){
+                    display: block;
+                }
+            }           
+        }
+        a{
+            font-family: "Open Sans",Helvetica,Arial,sans-serif;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            width: 265px;
+            font-weight: 700;
+            border: none;
+            outline: 0;
+            border-radius: 3px;
+            padding: 18px 5px;
+            &:hover {
+                background: $btn-action-bg;
+                padding: 18px 5px !important;
+                outline: none;
+            }
+        }
+        .call-us {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $content-heading;
+            margin-bottom: 1rem;
+            .linebreak-mobile {
+                display: none;
+                @media (max-width: 360px){
+                    display: block;
+                }
+            }
+            a{
+                color: $content-heading;
+                font-weight: 700; 
+                font-size: 22px;
+                text-decoration: none;
+                background-color: transparent;
+                @include media-breakpoint-down(xs){
+                    font-weight: 700; 
+                    font-size: 18px;
+                }
+            }
+            @include media-breakpoint-down(xs){
+                font-size: 18px;
+            }
+        }
+    }
+    // Get Quote ends here
+
+    // Footer
+    .main-footer {
+        background-color: $white;
+        color: $white;
+        margin-top: 0px;
+        padding: 45px 0 50px;
+        @include media-breakpoint-down(sm){
+            padding: 4px 0 0 0;
+        }
+        @include media-breakpoint-down(xs){
+            padding: 4px 15px 0 15px;
+        }
+        .footer-middle {
+            @include media-breakpoint-down(sm){
+                border-bottom: 1px solid #d9d9d9;
+                margin-bottom: 30px;
+            }
+            .caveat-wrap {
+                @include media-breakpoint-down(sm){
+                    border-bottom: 1px solid #d9d9d9;
+                }
+                .caveat {
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-size: 11px;
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: $card-body-text;
+                    margin-bottom: 65px;
+                    @include media-breakpoint-down(sm){
+                        margin-top: 30px;
+                        margin-bottom: 35px;
+                    }
+                }
+            }            
+            .footer-links{
+                @include media-breakpoint-up(lg){
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
+                @include media-breakpoint-down(md){
+                    padding-left: 0px;
+                    text-align: center;
+                    margin-top: 30px;
+                    border-right: none;
+                }
+                @include media-breakpoint-down(sm){
+                    text-align: left;
+                    border-right: none;
+                    //padding-left: 15%;
+                }
+                @include media-breakpoint-down(xs){
+                    text-align: left;
+                    border-right: none;
+                    //padding-left: 15%;
+                }
+                
+                .link-sec {
+                    margin-top: 0px;
+                    @include media-breakpoint-down(xs){
+                        margin-bottom: 15px;
+                    }
+                    .footer-pad {
+                        h4 {
+                            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin-bottom: 23px;
+                            color: $heading-black;
+                            @include media-breakpoint-down(sm){
+                                font-size: 18px;
+                            }
+                            @include media-breakpoint-down(xs){
+                                font-size: 18px;
+                            }
+                        }
+                        ul {
+                            li{
+                                color: $card-body-text;
+                                margin-bottom: 4px;
+                                @include media-breakpoint-down(sm){
+                                    margin-bottom: 2px;
+                                }
+                                @include media-breakpoint-down(xs){
+                                    margin-bottom: 2px;
+                                }
+                                a {
+                                    color: $card-body-text;
+                                    font-size: 16px;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }                    
+                }
+                .footer-social {
+                    border-left: 1px solid #d3d3d3;
+                    margin-top: 0px;
+                    padding-left: 50px;
+                    @include media-breakpoint-down(md){
+                        padding-left: 10px;
+                        text-align: center;
+                    }
+                    @include media-breakpoint-down(sm){
+                        text-align: left;
+                    }
+                    @include media-breakpoint-down(xs){
+                        text-align: left;
+                        border-left: none;
+                    }
+                    
+                    h4 {
+                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 12px;
+                        color: $heading-black;
+                        @include media-breakpoint-down(sm){
+                            margin-right: 15px;
+                        }
+                        @include media-breakpoint-down(xs){
+                            margin-right: 15px;
+                        }
+                    }
+                    ul {
+                        list-style: none;
+                        padding-left: 0px;
+                        li {
+                            display: inline-block;
+                            margin-right: 10px;
+                            a{
+                                i{
+                                    color: $card-body-text;
+                                    font-size: 40px;
+                                    @include media-breakpoint-down(sm){
+                                        font-size: 50px;
+                                    }
+                                    @include media-breakpoint-down(xs){
+                                        font-size: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .social-desk{
+                    @include media-breakpoint-down(sm){
+                        display: none;
+                    }
+                }  
+                .social-mobile{
+                    display: none;
+                    @include media-breakpoint-down(sm){
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+                }              
+            }
+            
+        }
+    }
+    // Footer ends here
+
+    // Footer bottom
+    .footer-bottom {
+        text-align: center;
+        @include media-breakpoint-down(sm){
+            text-align: left;
+        }
+        p{
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            color: $dove-gray;
+            font-size: 10px;
+            line-height: 18px;
+            float: left;
+            padding-bottom: 20px;
+            clear: both;
+            margin-bottom: 1rem;
+            @include media-breakpoint-up(lg){
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            br{
+                display: none;
+                @include media-breakpoint-down(sm){
+                    display: block;
+                }
+            }
+        }
+    }
+    // Footer bottom ends here
+
+}
+
+
+
+

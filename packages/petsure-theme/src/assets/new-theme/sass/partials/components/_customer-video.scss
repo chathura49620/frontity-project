@@ -1,0 +1,63 @@
+$primary: #65509c;
+$white: #ffffff;
+$font-regular: 'Open Sans', sans-serif;
+$font-ciutadella: 'Ciutadella Rounded', Sans-serif;
+
+.what-customer-say{
+  background: $primary;
+  color: $white;
+  padding: 2rem 0;
+  .container{
+    .hero-details{
+      width: 30%;
+      padding-right: 2rem;
+      text-align: center;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0;
+      }
+      h3{
+        font-family: $font-regular;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+        @include media-breakpoint-down(md){
+          font-size: 1rem;
+        }
+      }
+      h4{
+        font-family: $font-ciutadella;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        @include media-breakpoint-down(md){
+          font-size: 1.2rem;
+          line-height: normal;
+        }
+        br{
+          @include media-breakpoint-down(sm){
+            display: none;
+          }
+        }
+        strong{
+          white-space: nowrap;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+    }
+    .video-widget{
+      width: 70%;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+      .fluid-width-video-wrapper{
+        border: 5px solid $white;
+        iframe{
+          background: #000000;
+        }
+      }
+    }
+  }
+}

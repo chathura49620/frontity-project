@@ -1,0 +1,206 @@
+/* common css */
+
+	#wpadminbar {
+		margin-top:0;
+	}
+
+	.postcontentwrapper {
+		img {
+			float:left;
+			margin:1em 1em 1em 0;
+			&.alignright {
+				float:right;
+				margin:1em 0 1em 1em;
+			}
+			&.aligncenter {
+				display:block;
+				float:none;
+				margin:1em auto;
+			}
+		}
+	}
+
+	.textcenter {
+		text-align:center;
+	}
+	.text-red {
+		color:#d94c07;
+	}
+	.caveatblock {
+		font-size:80%;
+	}
+	
+	.mainarticle {
+		> h1,
+		> h2,
+		> h3 {
+		}
+	}
+
+/* 404 page */
+	.errorpage {
+		width:100%;
+		padding:80px 0 60px 0;
+		background:#eeeeee;
+		text-align:center;
+	}
+
+
+/* variables */
+
+	@orange: #F8641B;
+
+	@font-dax:"ff-dax-web-pro",Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,"Helvetica Neue",Arial,sans-serif;
+
+
+	@tabletWidth: 767px;
+	@mobileWidth: 420px;
+
+
+@media (max-width:@tabletWidth){
+	
+}
+
+@media (max-width:@mobileWidth){
+
+}
+
+
+/* mixins */
+
+	/* use to generate font sizes based off the default font size of 16px */
+	/* pass the size in px/pt to return a rem e.g. .fontcalculate(21) would return a font size of 1.3125rem */
+	.fontcalculate(@px){
+		font-size:(@px / 16) * 100%; //fallback for older browsers, creates a percentage value, may cause nesting issues
+		@sizeval:@px / 16;
+		font-size:~"@{sizeval}rem";
+	}
+
+	/* calculate line height based on px values from photoshop */
+	/* pass the fontsize and required line height in px, e.g. .lineheight(21,35) would give a line height of 166.667%, with a font size of 21px gives an actual line height of 35px */
+	.lineheight(@fontsize,@lineheight){
+		line-height:@lineheight / (@fontsize / 100%);
+	}
+
+	.border-box {
+		-moz-box-sizing   : border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing    : border-box;
+		box-sizing        : border-box;
+	}
+	
+	.column-count(@count){
+		-webkit-column-count: @count;
+		-moz-column-count: @count;
+		column-count: @count;
+	}
+	/* note does not accept percentage as a valid value */
+	.column-width(@width){
+		-webkit-column-width: @width;
+		-moz-column-width: @width;
+		column-width: @width;
+	}
+	.column-gap(@width){
+		-webkit-column-gap: @width;
+		-moz-column-gap: @width;
+		column-gap: @width;
+	}
+	.break-inside(){
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	.flex() {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	
+	.flex-direction(@direction) {
+		-moz-box-direction: @direction;
+		-webkit-box-direction: @direction;
+		-webkit-flex-direction: @direction;
+		-ms-flexbox-direction: @direction;
+		-ms-flex-direction: @direction;
+		flex-direction: @direction;
+	}
+
+	.justify-content(@position) {
+	    -webkit-box-pack: @position;
+	    -webkit-justify-content: @position;
+	    justify-content: @position;
+	}
+
+	.flex-wrap() {
+	    -moz-box-wrap: wrap;
+	    -webkit-box-wrap: wrap;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flexbox-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	}
+
+	.flex-nowrap(){
+		-ms-flex-align: center;
+		-ms-flex-pack: center;
+		-ms-box-orient:horizontal;
+		-moz-box-wrap: nowrap;
+		-webkit-box-wrap: nowrap;
+		-webkit-flex-wrap: nowrap;
+		-ms-flexbox-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+
+	.flex-grow() {
+	  -webkit-flex: 1 0 0;
+	  -ms-flex: 1 0 100%;
+	  flex: 1 0 0;
+	}
+
+	.align-content(@content) {
+		-webkit-box-align-content: @content;
+		-webkit-align-content: @content;
+		-ms-flex-align-content: @content;
+		align-content: @content;
+	}
+
+	.align-items(@items) {
+		-webkit-box-align: @items;
+		-webkit-align-items: @items;
+		-moz-box-align: @items;
+		-ms-flex-align: @items;
+		align-items: @items;
+	}
+
+	.align-self(@self) {
+		display: table-cell;
+		-webkit-align-self: @self; /* Safari 7.0+ */
+		align-self: @self;
+	}
+
+//New header styles
+.callus__opentimes::after {
+	left: 2.5em !important;
+	right: auto
+}
+
+.callus__tagline a.btn:active, .callus__tagline a.btn.btn--active, .callus__tagline .btn:active, .callus__tagline .btn.btn--active {
+	padding: .55em 1em .45em !important
+}
+
+.callus__tagline a.btn:hover, .callus__tagline a.btn.btn--active, .callus__tagline .btn:hover, .callus__tagline .btn.btn--active {
+	padding: .55em 1em .45em !important
+}
+
+.btn--secondary:hover {
+	box-shadow: 0 0 10px #1e6bb8 !important;
+	outline: medium none;
+	z-index: 99
+}
+
+.btn--secondary.btn-right-top {
+	margin: 0 0 0 7px !important
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Button---Call" transform="translate(-6.000000, -9.000000)" fill="#FFFFFF">
+            <path d="M11.7226256,22.050675 C10.5551173,20.8833917 9.83535257,19.8666313 7.2620644,21.9348017 C4.68855123,24.0038721 6.66514794,25.3824273 7.79598176,26.5137111 C9.10096308,27.8184675 13.9656185,26.5823352 18.7740247,21.774604 C23.5817558,16.9657478 24.8187881,12.1010924 23.5129068,10.7956611 C22.381848,9.66460226 21.0032927,7.68868054 18.9351223,10.2624187 C16.866502,12.8350319 17.8828124,13.5550216 19.0505457,14.7225299 C19.865484,15.5379182 18.1631584,17.6004637 16.3818589,19.3819882 C14.6005594,21.1632877 12.5377889,22.8660633 11.7226256,22.050675 Z" id="Shape" transform="translate(14.999850, 18.000000) scale(-1, 1) translate(-14.999850, -18.000000) "></path>
+        </g>
+    </g>
+</svg>

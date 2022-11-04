@@ -1,0 +1,55 @@
+.faq-block-wrapper {
+  padding: 22px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 67px 10px;
+  }
+
+  .sub-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+  }
+
+  .accordion {
+    .card {
+      border: unset;
+
+      .card-header {
+        background-color: unset;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        @include border-opacity(#d9d9d9, 0.5);
+        margin-bottom: 0;
+        padding: 0;
+
+        .btn {
+          font-family: $font-family-base;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 17px 0;
+          background: $white;
+          color: $mine-shaft !important;
+          width: 100%;
+          margin-top: 0;
+          line-height: normal;
+
+          @include media-breakpoint-up(lg) {
+            margin-top: 16px;
+            font-size: 20px;
+          }
+
+          .fa-angle-down {
+            color: $purple;
+            font-size: 30px;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

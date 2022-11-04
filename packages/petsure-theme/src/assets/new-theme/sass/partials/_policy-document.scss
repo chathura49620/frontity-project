@@ -1,0 +1,666 @@
+.policy-document {
+  color: $mine-shaft;
+  font-family: $font-family-base;
+
+  .container {
+    @include media-breakpoint-down(xs) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  p {
+    font-family: $font-family-base;
+    font-size: 16px;
+  }
+
+  %max-width {
+    margin: 0 auto;
+    max-width: 1375px;
+    position: relative;
+  }
+
+  .sub-title {
+    color: $primary-title;
+    font-family: $font-family-base;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+
+  h2 {
+    font-size: 20px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .desktop {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  .mobile {
+    display: block;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .document-list {
+    li {
+      a{
+        color: $primary;
+      }
+    }
+  }
+
+  .accordion {
+    .card {
+      border: unset;
+
+      .card-header {
+        background-color: unset;
+        border: none;
+        position: relative;
+
+        @include border-opacity(#d9d9d9, 0.5);
+        margin-bottom: 0;
+        padding: 0;
+
+        .btn {
+          font-family: $font-family-base;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 17px 0;
+          background: $white;
+          color: $mine-shaft !important;
+          width: 100%;
+          margin: 0;
+          line-height: normal;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 20px;
+          }
+
+          .fa-chevron-down {
+            color: $gray;
+            font-size: 22px;
+            padding-right: 10px;
+            // position: absolute;
+            // right: 0;
+            // top: 20px;
+
+            @include media-breakpoint-up(lg) {
+              font-size: 22px !important;
+            }
+          }
+
+          &:focus {
+            box-shadow: unset;
+          }
+
+          &.centered-icon {
+            flex-direction: column;
+            text-align: center;
+
+            @include media-breakpoint-up(lg) {
+              flex-direction: row;
+            }
+            .sub-title {
+              margin: 0;
+              text-align: center;
+
+              @include media-breakpoint-up(lg) {
+                text-align: left;
+              }
+            }
+
+            .fas {
+              font-size: 45px;
+            }
+
+            .fa-chevron-down {
+              color: $gray;
+              position: absolute;
+              bottom: 0;
+              //padding-right: 0;
+              right: unset;
+              top: unset;
+
+              @include media-breakpoint-up(lg) {
+                position: relative;
+                font-size: 16px;
+              }
+            }
+          }
+
+          &[aria-expanded="true"] {
+            .fa-chevron-down {
+              color: $primary-title;
+
+              &::before {
+                content: "\f077";
+              }
+            }
+          }
+
+          &[aria-expanded="false"] {
+            .fa-chevron-down {
+              &::before {
+                content: "\f078";
+              }
+            }
+          }
+          &:active{
+            box-shadow: unset;
+          }
+        }
+      }
+      .card-body {
+        padding: 0;
+        .document-list {
+          color: $primary;
+
+          ul {
+            padding: 0;
+            li {
+              margin-bottom: 15px;
+              &::marker {
+                font-size: 0;
+              }
+              a {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .accordion {
+          &.inner-accordian {
+            .card {
+              .card-header {
+                .btn {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.card-border {
+        &:first-of-type {
+          border-top: 1px solid $mine-shaft;
+          @include border-opacity($mine-shaft, 0.15);
+        }
+        border-bottom: 1px solid $mine-shaft;
+        @include border-opacity($mine-shaft, 0.15);
+      }
+    }
+  }
+
+  .hero-banner-section {
+    @extend %max-width;
+
+    .hero-image {
+      @include flex-property(row, center, center);
+      min-height: 233px;
+
+      @include media-breakpoint-up(lg) {
+        min-height: 216px;
+      }
+
+      .container {
+        .inner-container {
+          // padding-left: 30px;
+          // padding-right: 30px;
+
+          @include media-breakpoint-up(lg) {
+            // padding-right: 15px;
+            // padding-left: 15px;
+          }
+
+          .purple-content {
+            background-color: $primary;
+            border-radius: 5px;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+              text-align: left;
+              max-width: 362px;
+            }
+
+            .main-title {
+              color: $white;
+              font-size: 28px;
+              margin-top: 0;
+
+              @include media-breakpoint-up(lg) {
+                font-size: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-description-section {
+    @extend %max-width;
+    background-color: $content-bg-lightest;
+    margin-top: 0;
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 5px;
+    }
+
+    .container {
+      .main-description-wrapper {
+        padding-bottom: 15px;
+        padding-top: 35px;
+
+        @include media-breakpoint-up(lg) {
+          padding-bottom: 17px;
+          padding-top: 33px;
+        }
+
+        .inner-container {
+          .main-description {
+            @include media-breakpoint-up(lg) {
+              max-width: 887px;
+              width: 100%;
+            }
+
+            a {
+              color: $mine-shaft;
+
+              &:hover {
+                color: $mine-shaft;
+              }
+              &:visited {
+                color: $mine-shaft;
+              }
+            }
+
+            p {
+              font-size: 14px;
+              margin-bottom: 20px;
+
+              @include media-breakpoint-up(lg) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .latest-documents-section {
+    margin-top: 0;
+    padding-top: 40px;
+    padding-bottom: 5px;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 60px;
+      padding-bottom: 6px;
+    }
+
+    .row {
+      &:last-of-type {
+        .optional-docs {
+          .card-border {
+            @include media-breakpoint-up(md){
+              border-bottom: unset;
+            }
+            
+          }
+        }
+      }
+    }
+
+    h3 {
+      &.sub-title {
+        @include media-breakpoint-down(xs) {
+          max-width: 254px;
+          width: 100%;
+        }
+      }
+    }
+
+    h2 {
+      &.sub-title {
+        margin-bottom: 25px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .inner-container {
+      margin-bottom: 25px;
+
+      .docs-wrapper {
+        .sub-title {
+          color: $mine-shaft;
+        }
+      }
+
+      h2 {
+        &.sub-title {
+          margin-bottom: 25px;
+          @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .document-list {
+        color: $primary;
+
+        ul {
+          padding: 0;
+          li {
+            margin-bottom: 12px;
+            @include media-breakpoint-up(lg) {
+              margin-bottom: 15px;
+            }
+            &::marker {
+              font-size: 0;
+            }
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .optional-docs {
+        .accordion {
+          .card {
+            .card-header {
+              .btn {
+                font-size: 16px !important;
+                padding: 20px 0;
+                @include media-breakpoint-up(lg) {
+                  //padding: 17px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .insurance-product-information-section {
+    margin: 0;
+    padding-bottom: 17px;
+    padding-top: 18px;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 60px;
+      padding-top: 0;
+    }
+
+    .accordion {
+      @include media-breakpoint-up(lg) {
+        border-bottom: 1px solid $mine-shaft;
+        @include border-opacity($mine-shaft, 0.15);
+      }
+
+      .card {
+        .card-header {
+          .sub-title {
+            &.mobile {
+              max-width: 245px;
+              width: 100%;
+              margin: 0 auto;
+              text-align: center;
+              line-height: 1.75;
+              margin-bottom: 18px;
+            }
+          }
+          .btn {
+            .sub-title {
+              margin: 0;
+            }
+            .doc-title {
+              font-weight: 700;
+              @include media-breakpoint-down(xs) {
+                max-width: 205px;
+                width: 100%;
+              }
+            }
+            &.desktop {
+              @include media-breakpoint-up(lg) {
+                display: flex !important;
+              }
+            }
+          }
+
+          .header-desc {
+            text-align: center;
+            margin-bottom: 0;
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+              max-width: 935px;
+              margin-bottom: 20px;
+              text-align: left;
+            }
+          }
+          &.purple-icon-header {
+            padding-bottom: 0;
+
+            @include media-breakpoint-up(lg) {
+              padding-bottom: 0;
+            }
+            .centered-icon {
+              .sub-title {
+                padding: 0 10px;
+                line-height: 1.75;
+
+                @include media-breakpoint-up(lg) {
+                  padding: 0;
+                  line-height: normal;
+                }
+              }
+            }
+            .fa-chevron-down {
+              color: $primary-title;
+            }
+          }
+        }
+        .mobile-drop-down {
+          background-color: transparent;
+
+          .fa-chevron-down {
+            color: $primary-title;
+            font-size: 45px;
+          }
+
+          &:focus {
+            box-shadow: unset;
+          }
+
+          &[aria-expanded="true"] {
+            .fa-chevron-down {
+              &::before {
+                content: "\f077";
+              }
+            }
+          }
+
+          &[aria-expanded="false"] {
+            .fa-chevron-down {
+              &::before {
+                content: "\f078";
+              }
+            }
+          }
+        }
+        &.card-border {
+          &:last-of-type {
+            //border-bottom: unset;
+          }
+
+          &:first-of-type {
+            border-top: unset;
+          }
+        }
+      }
+
+      .accordion {
+        &.inner-accordian {
+          padding-top: 44px;
+          border-bottom: unset;
+
+          @include media-breakpoint-up(lg) {
+            padding-top: 0;
+          }
+  
+          .card-border {
+            &:last-of-type {
+              @include media-breakpoint-up(lg) {
+                border-bottom: unset;
+              } 
+            }
+          }
+          .card {
+            &.card-border {
+              &:first-of-type{
+                border-top: 1px solid $mine-shaft;
+                @include border-opacity($mine-shaft, 0.15);
+              }
+            }
+          }
+        }
+      }
+      
+    }
+    &.archive-policy-section {
+      padding-top: 42px;
+      @include media-breakpoint-up(lg) {
+        padding-top: 40px;
+      }
+      .accordion {
+        border: unset;
+        &.main-accordian {
+          @include media-breakpoint-up(lg) {
+            border-bottom: 1px solid $mine-shaft;
+            @include border-opacity($mine-shaft, 0.15);
+          }
+        }
+        .card-header {
+          border: unset;
+        }
+        .sub-title {
+          &.mobile {
+            max-width: unset !important;
+          }
+        }
+        .btn {
+          @include media-breakpoint-up(lg) {
+            padding-top: 22px;
+          }
+          .doc-title {
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            max-width: unset;
+
+            @include media-breakpoint-up(lg) {
+              flex-direction: row;
+            }
+          }
+        }
+        .optional-accordin {
+          .card-border {
+            border-top: 1px solid $mine-shaft;
+            @include border-opacity($mine-shaft, 0.15);
+            border-bottom: unset;
+
+          }
+          .sub-title {
+            color: $mine-shaft
+          }
+        }
+      }
+    }
+  }
+  .my-staysure-section {
+    @extend %max-width;
+    background-color: $content-bg-lightest;
+    margin-top: 0;
+    padding: 35px 0;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      padding: 50px 0;
+      text-align: left;
+    }
+    .container {
+      .row {
+        h2 {
+          &.sub-title {
+            @include media-breakpoint-down(xs) {
+              max-width: 224px;
+              width: 100%;
+              margin: 0 auto;
+              margin-bottom: 20px;
+              line-height: 1.75;
+            }
+          }
+        }
+        .content-wrapper {
+          @include media-breakpoint-up(lg) {
+            max-width: 835px;
+            width: 100%;
+          }
+
+          .mobile {
+            margin-bottom: 25px;
+            a{
+              color: $mine-shaft;
+
+              &:visited{
+                color: $mine-shaft;
+              }
+
+              &:hover{
+                color: $mine-shaft;
+              }
+
+              &:focus {
+                color: $mine-shaft;
+              }
+            }
+          }
+        }
+        .btn {
+          margin: 0 auto;
+
+          @include button(185px, 45px, 3px, $bg-primary, $white, 18px);
+          i {
+            margin-right: 5px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            margin: 22px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

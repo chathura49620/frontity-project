@@ -1,0 +1,44 @@
+.purple-block {
+  background-color: $light-purple;
+  text-align: center;
+  padding: 42px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: 60px 0;
+  }
+
+  .sub-title {
+    color: $white;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    max-width: 186px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+      max-width: unset;
+      margin-bottom: 30px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include button(278px, 60px, 3px, $orange, $white, 28px);
+    border-color: $orange;
+
+    @include media-breakpoint-up(lg) {
+      height: 80px;
+      font-size: 30px;
+      border-radius: 5px;
+      width: 300px;
+    }
+  }
+}

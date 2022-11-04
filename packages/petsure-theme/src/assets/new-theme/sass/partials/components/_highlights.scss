@@ -1,0 +1,149 @@
+.highlights{
+  overflow-x: hidden;
+  .highlights-summery{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    h2{
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 0.91;
+    }
+    p{
+      font-size: 18px;
+      line-height: 1.33;
+    }
+
+  }
+  .align-items-stretch{
+    margin: {
+      left: -50px;
+      right: -50px;
+    };
+    @include media-breakpoint-down(md){
+      margin: {
+        left: -15px;
+        right: -15px;
+      };
+    }
+  }
+  .highlight-cards{
+    margin-top: 0;
+    display: flex;
+    align-items: stretch;
+    padding: 0 50px;
+    position: relative;
+    @include media-breakpoint-down(md){
+      padding: 0 12px;
+    }
+    @include media-breakpoint-down(sm){
+      margin-bottom: 3.5rem;
+    }
+    &:after{
+      content: '';
+      height: 50%;
+      width: 1px;
+      background-color: $tag-bg;
+      right: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include media-breakpoint-down(sm){
+        display: none;
+      }
+    }
+    &:first-child{
+
+    }
+    &:last-child{
+      @include media-breakpoint-down(sm){
+        margin-bottom: 0;
+      }
+      &:after{
+        display: none;
+      }
+    }
+  }
+  .card{
+    &.highlight{
+      border: none;
+      box-shadow: -0.9px 0.5px 6.3px 0.7px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      .card-icon{
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -12%;
+        @include media-breakpoint-down(md){
+          top: -12%;
+        }
+        &.circle{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 1px solid $card-border;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $white;
+          top: -50px;
+          img{
+            max-width: 70%;
+            height: auto;
+            margin: auto;
+          }
+        }
+      }
+      .card-body{
+        padding: 76px 16px 44px 16px;
+        position: relative;
+        @include media-breakpoint-down(md){
+          padding: 50px 15px;
+        }
+        @include media-breakpoint-down(sm){
+          padding: 65px 25px 30px 25px;
+        }
+        .card-title{
+          font-size: 22px;
+          line-height: 1.09;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          @include media-breakpoint-down(md){
+            font-size: 1.25rem;
+          }
+        }
+        p{
+          font-size: 16px;
+        }
+        &:after{
+          content: '';
+          background-color: $tag-bg;
+          height: 24px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  .logo-set{
+    .col-6{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      @include media-breakpoint-down(sm){
+        margin-top: 2rem;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}

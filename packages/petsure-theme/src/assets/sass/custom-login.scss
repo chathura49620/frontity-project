@@ -1,0 +1,173 @@
+@import "variable";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap');
+
+$body-color: #464646;
+$secondary-color: #ea580c;
+body{
+  &.login{
+    background-color: $primary;
+    color: $white;
+    font-family: $font-regular;
+    a{
+      color: $white;
+      &:hover{
+        color: $white;
+      }
+    }
+    #login{
+      display: flex;
+      flex-direction: column;
+      width: 443px;
+      padding: 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      h1{
+        font-size: 20px;
+        height: 70px;
+        order: 1;
+        a{
+          background-image: url("../img/staysure-logo-strapline-white.svg");
+          width: 100%;
+          background-size: 100%;
+          height: 70px;
+        }
+      }
+      #login_error{
+        background-color: $white;
+        color: $body-color;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        order: 2;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        padding-left: 40px;
+        border-left: none;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.47);
+      }
+      .message{
+        background-color: $white;
+        color: $body-color;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        order: 2;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        padding-left: 40px;
+        border-left: none;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.47);
+      }
+      #backtoblog{
+        order: 3;
+        margin-bottom: 38px;
+        padding-left: 40px;
+        a{
+          color: $white;
+          font-size: 16px;
+          &:hover{
+            color: $white;
+          }
+        }
+      }
+      #nav{
+        order: 4;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        margin-bottom: -50px;
+        padding-left: 40px;
+        z-index: 59;
+        a{
+          color: $body-color;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+      }
+      #loginform{
+        box-shadow: 0 3px 33px rgba(0,0,0,0.47);
+        border-radius: 10px;
+        order: 5;
+        padding: 60px 40px 30px 40px;
+        margin-top: 10px;
+        label{
+          font-size: 16px;
+          color: $body-color;
+          font-weight: 600;
+          input{
+            &[type="text"], &[type="password"]{
+              font-size: 16px;
+              height: 54px;
+              font-weight: 400;
+              padding-left: 10px;
+            }
+          }
+        }
+        .forgetmenot{
+          float: none;
+        }
+      }
+      .submit{
+        padding-top: 1rem;
+        #wp-submit{
+          background-color: $secondary-color;
+          border-radius: 0;
+          border: none;
+          font-family: $font-ciutadella;
+          font-weight: 600;
+          text-shadow: none;
+          box-shadow: none;
+          font-size: 16px;
+          float: none;
+          height: 48px;
+          line-height: 48px;
+          padding: 0 30px;
+        }
+      }
+    }
+    &.login-action-lostpassword{
+      #login {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          order: 1;
+        }
+        .message {
+          order: 2;
+        }
+        #lostpasswordform {
+          order: 5;
+          box-shadow: 0 3px 33px rgba(0,0,0,0.47);
+          border-radius: 10px;
+          padding: 60px 40px 30px 40px;
+          margin-top: 10px;
+          margin-bottom: 0;
+          label{
+            font-size: 16px;
+            color: $body-color;
+            font-weight: 600;
+            input{
+              &[type="text"], &[type="password"]{
+                font-size: 16px;
+                height: 54px;
+                font-weight: 400;
+                padding-left: 10px;
+              }
+            }
+          }
+          .forgetmenot{
+            float: none;
+          }
+        }
+        #nav {
+          order: 4;
+        }
+        #backtoblog {
+          order: 3;
+          margin-bottom: 38px;
+        }
+      }
+    }
+  }
+}

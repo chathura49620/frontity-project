@@ -1,0 +1,217 @@
+.deal-box-wrapper {
+  padding-bottom: 5px;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 auto;
+    max-width: 1375px;
+    padding-bottom: 50px;
+    background: #fcfcfc;
+  }
+
+  .deal-box {
+    margin-top: 30px;
+    margin-bottom: 38px;
+    background-color: $white;
+    padding: 20px 34px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    flex-direction: column;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      padding: 37px 48px;
+      flex-direction: row;
+      text-align: left;
+      margin-top: 0;
+    }
+
+    .left-block {
+      @include media-breakpoint-up(lg) { 
+        padding-right: 25px;
+
+      }
+    }
+
+    &:first-of-type {
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        margin-top: -70px;
+        z-index: 5;
+      }
+    }
+
+    .description {
+      margin-bottom: 10px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .right-block {
+      margin-top: 15px;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+
+      a {
+        &.btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .sub-title {
+      color: $light-purple;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 5px;
+        font-size: 24px;
+      }
+    }
+
+    .description-wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .description {
+        //margin-right: 28px;
+        @include media-breakpoint-up(lg) {
+          margin-right: 10px;
+          width: 80%;
+        }
+      }
+      .code {
+        background-color: #00a2ab;
+        width: 102px;
+        height: 33px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(lg) {
+          margin: 0;
+          height: auto;
+          background-color: transparent;
+          justify-content: left !important;
+        }
+
+        .code-text {
+          font-size: 21px;
+          font-weight: bold;
+          color: $white;
+          margin: 0;
+
+            @include media-breakpoint-up(md) {
+            margin: 0;
+            font-size: 25px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            font-size: 20px;
+            background-color: #00a2ab;
+          }
+
+        }
+      }
+    }
+
+    .btn {
+      @include button(213px, 46px, 3px, $light-purple, $white, 23px);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+      border-color: $light-purple;
+      color: $white !important;
+
+      @include media-breakpoint-up(lg) {
+        width: 238px;
+        height: 72px;
+        font-size: 28px;
+        border-radius: 5px;
+      }
+
+      &.copy-code-btn {
+        .fa-check {
+          margin-left: 10px;
+          display: none;
+        }
+
+        &:active {
+          .fa-check {
+            display: inline-block;
+          }
+        }
+        &:focus {
+          .fa-check {
+            display: inline-block;
+          }
+        }
+      }
+
+      &:active {
+        background-color: $white;
+        color: $light-purple !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+        border-color: transparent;
+      }
+
+      &:focus {
+        background-color: $white;
+        color: $light-purple !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16) !important;
+        border-color: transparent;
+      }
+    }
+
+    .small-description {
+      color: $mine-shaft;
+      font-size: 14px;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        //font-size: 15px;
+      }
+    }
+
+    &:first-of-type {
+      .small-description {
+        margin-bottom: 1rem;
+        text-decoration: underline;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    .btn {
+      @include button(238px, 72px, 5px, $orange, $white, 28px);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+      border-color: $orange;
+    }
+
+    &.desktop {
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

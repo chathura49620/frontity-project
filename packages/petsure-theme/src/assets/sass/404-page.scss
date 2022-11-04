@@ -1,0 +1,578 @@
+$font-primary: 'Ciutadella Rounded', Arial, Sans-serif;
+$font-regular: 'Open Sans', sans-serif;
+
+$themeAssets: "..";
+
+
+$red:                 #ff0000;
+$error-color:         #dd0000;
+$body-color:          #2a2a2a;
+$primary:             #65509c;
+$secondary:           #f5723a;
+$success:             #20c997;
+$dark:                #140a2f;
+$light:               #e4e4e4;
+$bg-very-light:       #ebebeb;
+$warning:             #f9b000;
+$bg-primary:          #522367;
+$white:               #ffffff;
+$info:                #1da1f2;
+$danger:              $red;
+$card-border:         #c1c1c1;
+$gray-border:         #e8e8e8;
+$primary-title:       #522367;
+$light-gray-title:    #777777;
+$gray-bg:             #f8f8f8;
+$link-hover:          #8d38b8;
+$tag-bg:              #00a4ad;
+$offer-color:         #ea570a;
+$brownish-grey:       #606060;
+$icon-grey:           #464646;
+$action-color:        #ef7d0a;
+$card-text-color:     #585858;
+$intro-text-color:    #464646;
+$sagt-color:          #f5a11b;
+$sagt-bg:             #552859;
+$pga-bg:              #5c276d;
+$twitter-color:       #00acee;
+$facebook-color:      #3b5998;
+
+$card-border-radius:    0;
+$btn-border-radius:     0;
+$btn-border-radius-lg:  0;
+$btn-border-radius-sm:  0;
+$btn-padding-y-lg:      0.75rem;
+$btn-padding-x-lg:      3rem;
+$btn-font-size-lg:      22px;
+$btn-line-height-lg:    22px;
+
+$card-border-color:     $card-border;
+
+$input-border-radius:    0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+
+$input-btn-focus-box-shadow:  0;
+
+$container-max-widths: (
+        xs: 576px,
+        sm: 767px,
+        md: 991px,
+        lg: 1024px,
+        xl: 1120px
+);
+
+@mixin if-ie{
+  @media all and (-ms-high-contrast:none) {
+    @content;
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+section{
+  * + *{
+    margin-top: inherit;
+  }
+}
+h1, h2{
+  font-family: $font-primary;
+  font-size: 2rem;
+  font-weight: 500;
+}
+h3,h4,h5,h6{
+  font-family: $font-primary;
+}
+//.container{
+//  @include media-breakpoint-down(sm){
+//    max-width: 100% !important;
+//  }
+//}
+.bg-primary-dark{
+  background-color: $bg-primary;
+}
+.bg-accent{
+  background-color: $tag-bg;
+}
+.bg-very-light{
+  background-color: $bg-very-light;
+}
+.title-md{
+  font-family: $font-primary;
+}
+.title-smbd{
+  font-family: $font-primary;
+}
+.text-md{
+  font-family: $font-primary;
+}
+.text-regular{
+  font-family: $font-regular;
+}
+h3.section-title{
+  font-size: 28px;
+  font-weight: 800;
+  @include media-breakpoint-down(sm){
+    font-size: 24px;
+  }
+}
+.hidden-mobile{
+  @include media-breakpoint-down(xs){
+    display: none !important;
+  }
+}
+.visible-mobile{
+  @include media-breakpoint-up(sm){
+    display: none !important;
+  }
+}
+.btn{
+  font-family: $font-primary;
+  font-weight: 500;
+  outline: 0;
+  margin: 0;
+  &.btn-bold{
+    height: 38px;
+    line-height: 36px;
+    padding: 0 87px;
+    font-family: $font-primary;
+    font-size: 18px;
+    max-width: 100%;
+    outline: 0;
+    margin: 0;
+    @include media-breakpoint-down(sm){
+      padding: 0 40px;
+    }
+    &:hover{
+      padding: 0 87px;
+      outline: 0;
+      @include media-breakpoint-down(xs){
+        padding: 0 40px;
+      }
+    }
+  }
+  &.btn-bold-no-pad{
+    height: 38px;
+    line-height: 36px;
+    padding: 0 28px;
+    font-family: $font-primary;
+    font-size: 18px;
+    max-width: 100%;
+    outline: 0;
+    margin: 0;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    &:hover{
+      padding: 0 28px;
+      outline: 0;
+    }
+  }
+  &.btn-outline-light{
+    border-color: $white;
+    color: $white;
+    &:hover{
+      background-color: $white;
+      color: $body-color;
+    }
+  }
+}
+.card{
+  .card-img-top{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    @include media-breakpoint-up(md){
+      height: 240px;
+    }
+  }
+  .card-body{
+    @include media-breakpoint-down(xs){
+      text-align: center;
+    }
+    .card-title{
+      font-size: 37px;
+      line-height: 33px;
+      color: $black;
+      font-weight: 800;
+    }
+    .card-subtitle{
+      font-size: 21px;
+      line-height: 24px;
+      color: $black;
+      margin-bottom: 14px;
+    }
+    .card-text{
+      font-size: 14px;
+      font-family: $font-regular;
+    }
+    .btn{
+      padding: 12px 40px;
+      line-height: 16px;
+      font-size: 16px;
+    }
+  }
+}
+.section-title{
+  font-size: 30px;
+  font-weight: 700;
+  @include media-breakpoint-down(xs){
+    font-size: 22px;
+  }
+}
+
+.not-found-page{
+  width: 100%;
+  font-family: $font-primary;
+  .row{
+    &.ie-row{
+      @include if-ie{
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+  .not-found-container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    @include media-breakpoint-down(sm){
+      padding-bottom: 0;
+    }
+    .error-icon{
+      margin: 1rem 0;
+      @include media-breakpoint-down(xs){
+        display: none;
+      }
+      i{
+        font-size: 23px;
+        color: $bg-primary;
+        transform: rotate(-45deg);
+      }
+    }
+    h2.page-title{
+      font-family: $font-primary;
+      font-weight: 500;
+      font-size: 26px;
+      margin-bottom: 1.4rem;
+      @include media-breakpoint-down(xs){
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    h3{
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 1.4rem;
+    }
+    p{
+      font-family: $font-primary;
+      font-weight: normal;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+    ul{
+      list-style: none;
+      display: inline-block;
+      margin: 0 auto;
+      padding-left: 15px;
+      margin-bottom: 1.5rem;
+      li{
+        text-align: left;
+        font-size: 18px;
+        &:before{
+          content: '\f0da';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          margin-left: -15px;
+          position: absolute;
+        }
+        a{
+          color: $bg-primary;
+          text-decoration: underline;
+        }
+      }
+    }
+    .search-form{
+      padding: 20px;
+      border: 2px solid $primary;
+      background-color: $white;
+      margin-bottom: 2rem;
+      @include media-breakpoint-down(xs){
+        margin-bottom: 0;
+        background-color: $bg-primary;
+      }
+      .input-group{
+        .field{
+          background-color: $bg-very-light;
+          border: none;
+          height: 44px;
+          color: $black;
+          margin-top: 0;
+          max-width: inherit;
+          @include media-breakpoint-down(xs){
+            background-color: $white;
+          }
+          &::placeholder{
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+        .btn-primary{
+          @extend .btn-secondary;
+          margin-top: 0;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          border: 1px solid transparent;
+          outline: none;
+          i{
+            margin-right: 4px;
+            @include media-breakpoint-down(xs){
+              margin-right: 0;
+            }
+          }
+          span{
+            @include media-breakpoint-down(xs){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.poplar-products{
+  h2{
+    font-family: $font-primary;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .product-wrapper{
+    .product-item{
+      align-items: stretch;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .card{
+        @include if-ie{
+          width: 100%;
+        }
+        .image-area{
+          @include if-ie{
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+          }
+          .card-img-top{
+            @include media-breakpoint-down(sm){
+              display: none;
+            }
+            @include if-ie{
+              height: 100%;
+              min-width: 100%;
+              max-width: inherit;
+              width: auto;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+        .card-body{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          @include if-ie{
+            flex-direction: row;
+          }
+          a{
+            text-decoration: none;
+          }
+          h5{
+            color: $bg-primary;
+            @include media-breakpoint-down(md){
+              font-size: 26px;
+              line-height: 26px;
+            }
+            @include if-ie{
+              width: 100%;
+              text-align: center;
+            }
+          }
+          h6{
+            color: $bg-primary;
+            @include if-ie{
+              width: 100%;
+              text-align: center;
+            }
+          }
+          .card-text{
+            @include if-ie{
+              margin-bottom: 1rem;
+            }
+          }
+          .btn{
+            margin-bottom: 0;
+            margin-top: auto;
+            @include media-breakpoint-down(sm){
+              display: none;
+            }
+            @include if-ie{
+              margin-right: 0;
+              margin-left: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$image-width:148px;
+
+.recent-articles{
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+  .article-list{
+    .article-item{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .card-image{
+        width: $image-width;
+        .card-img-left{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .card-body{
+        flex-direction: column;
+        width: calc(100% - #{$image-width});
+        .card-title{
+          font-weight: 600;
+          margin-bottom: 10px;
+          line-height: 20px;
+          a{
+            font-size: 16px;
+            font-family: $font-regular;
+            text-decoration: underline;
+            color: $bg-primary;
+            display: block;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+        .sub-title{
+          font-style: italic;
+          color: $light-gray-title;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .card-text{
+          font-size: 13px;
+          color: $black;
+        }
+      }
+    }
+  }
+  .category-list{
+    background-color: $gray-bg;
+    padding: 0;
+    padding-bottom: 30px;
+    font-family: $font-regular;
+    .category-header{
+      background-color: $light;
+      padding:16px 18px;
+      line-height: 16px;
+      h5{
+        margin-bottom: 0;
+        font-family: $font-regular;
+        font-size: 16px;
+      }
+    }
+    ul{
+      padding-left: 18px;
+      list-style: none;
+      margin-top: 18px;
+      margin-bottom: 0;
+      li{
+        margin: 0;
+        line-height: 24px;
+        a{
+          color: $bg-primary;
+          font-size: 16px;
+          text-decoration: underline;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .social-list{
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      li{
+        width: 47%;
+        a{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          text-decoration: none;
+          padding: 18px 15px;
+          &.twitter{
+            background-color: $twitter-color;
+            &:hover{
+              background-color: darken($twitter-color, 5%);
+            }
+          }
+          &.facebook{
+            background-color: $facebook-color;
+            &:hover{
+              background-color: darken($facebook-color, 5%);
+            }
+          }
+          i{
+            font-size: 32px;
+            margin-right: 10px;
+          }
+          .sub-title{
+            small,p{
+              margin: 0;
+              display: block;
+              font-family: $font-regular;
+            }
+            small{
+              font-size: 12px;
+              line-height: 14px;
+            }
+            p{
+              font-size: 16px;
+              line-height: 16px;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

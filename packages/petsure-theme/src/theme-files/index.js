@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
 import Switch from "@frontity/components/switch";
-import Page from './Pages/Page'
+// import Page from './Pages/Page'
+import Page from './Pages/Page.jsx'
 import Home from './Pages/Home'
 import Link from "./link"
 import externalCss from "../assets/extracss/extracss.min.css";
@@ -47,6 +48,7 @@ const Root = ({ state, actions, libraries }) => {
         <Header />
         <Switch>
           {/* <Loading when={data.isFetching} /> */}
+          {/* <Page when={!data.isHome} /> */}
           <Page when={!data.isHome} />
           <Home when={data.isHome} />
         </Switch>

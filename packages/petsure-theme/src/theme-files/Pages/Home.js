@@ -3,15 +3,13 @@ import React, { useEffect } from "react";
 
 const Home = ({ state, libraries }) => {
 
-  useEffect(() => {
-    libraries.source.api
+  useEffect(async () => {
+    const data = await libraries.source.api
       .get({
         endpoint: "pages",
         params: { _embed: true, id: 7 },
       })
-      .then((data) => {
-        console.log("dataFronApi dataFronApi", data);
-      });
+      console.log(data)
   }, []);
 
   return (

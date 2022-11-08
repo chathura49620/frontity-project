@@ -5,7 +5,11 @@ import Switch from "@frontity/components/switch";
 import Page from './Pages/Page.jsx'
 import Home from './Pages/Home'
 import Link from "./link"
+import StysureMin from "../assets/staysure.min.css";
 import externalCss from "../assets/extracss/extracss.min.css";
+import themeMin from "../assets/new-theme/css/theme.min.css";
+// import Extrascss from "../assets/new-theme/css/theme.min.css";
+
 import TagManager from 'react-gtm-module';
 // import  {getPageData}  from "./api";
 import { Global, css } from "frontity";
@@ -31,8 +35,10 @@ const Root = ({ state, actions, libraries }) => {
   
   return (
     <>
+    <Global styles={css(StysureMin)} />
     <Global styles={css(externalCss)} />
-      {data.isHome ?
+    <Global styles={css(themeMin)} />
+      {/* {data.isHome ?
         <h1>Petsure Theme</h1> : ''}
 
       <p>Current URL : {state.router.link}</p>
@@ -41,7 +47,7 @@ const Root = ({ state, actions, libraries }) => {
         <Link href="/single-trip-travel-insurance">single-trip-travel-insurance</Link>
         <Link href="/annual-travel-insurance">annual-travel-insurance</Link>
       </nav>
-      <hr />
+      <hr /> */}
       {/* <main> */}
         {/* {getPageData} */}
         {/* <hr /> */}

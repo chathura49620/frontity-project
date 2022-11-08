@@ -22,6 +22,9 @@
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
     "frontity": "^1.17.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "node-sass": "^7.0.3",
     "petsure-theme": "file:packages/petsure-theme",
     "react-gtm-module": "^2.0.11",
     "react-html-parser": "^2.0.2"

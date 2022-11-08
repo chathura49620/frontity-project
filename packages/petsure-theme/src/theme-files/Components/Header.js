@@ -7,6 +7,7 @@ const Header = ({ state }) => {
 
     return (
         <>
+
             <div id="navbar" class="wrapper sticky-header" style={{ paddingTop: "37px" }}>
 
                 <header class="siteheader clearfix home-page-header" itemscope="" itemtype="https://schema.org/brand">
@@ -94,6 +95,7 @@ const Header = ({ state }) => {
                     </nav>
                 </header>
             </div>
+            
         </>
     );
 };

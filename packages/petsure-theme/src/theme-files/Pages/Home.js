@@ -1,23 +1,35 @@
 import { connect } from "frontity";
-import React, { useEffect , useState } from "react";
-import ReactHtmlParser from 'react-html-parser'; 
+import React, { useEffect, useState } from "react";
+import ReactHtmlParser from 'react-html-parser';
 
 const Home = ({ state, libraries }) => {
-  const [homePageBannerData,sethomePageBannerData] = useState()
-  const [trustbuilderData,setTrustbuilderData] = useState()
+  const [homePageBannerData, sethomePageBannerData] = useState()
+  const [trustbuilderData, setTrustbuilderData] = useState()
+  const [productSectionData, setProductSectionData] = useState()
+  const [whyStaysureData, setwhyStaysureData] = useState()
+  const [tvAdvertData, setTvAdvertData] = useState()
+  const [caveatData, setcaveatData] = useState()
 
-  useEffect( () => {
+  useEffect(() => {
     const dataJson = JSON.parse(JSON.stringify(state)).source.page
     const acfData = dataJson[7].acf;
     const home_page_banner = acfData.home_page_banner;
     const trust_builder = acfData.trust_builder;
+    const product_list = acfData.product_list;
+    const why_staysure = acfData.why_staysure;
+    const tv_advert = acfData.tv_advert
+    const homepage_caveat = acfData.homepage_caveat
     sethomePageBannerData(home_page_banner);
     setTrustbuilderData(trust_builder);
-    console.log("state home data",acfData)
+    setProductSectionData(product_list)
+    setwhyStaysureData(why_staysure);
+    setTvAdvertData(tv_advert);
+    setcaveatData(homepage_caveat);
+    console.log("state home data", acfData)
   }, []);
 
-  useEffect( () => {
-    console.log("state home data",homePageBannerData?.heading)
+  useEffect(() => {
+    console.log("state home data", homePageBannerData?.heading)
   }, [homePageBannerData]);
 
   return (
@@ -28,14 +40,14 @@ const Home = ({ state, libraries }) => {
           <div className="row no-gutters">
             <div className="col-md-6">
               <div className="hero-summery">
-                <h1>{ ReactHtmlParser (homePageBannerData?.heading) }</h1>
-                { ReactHtmlParser (homePageBannerData?.description) }
+                <h1>{ReactHtmlParser(homePageBannerData?.heading)}</h1>
+                {ReactHtmlParser(homePageBannerData?.description)}
                 <a href={homePageBannerData?.more_details_link_reference_url} className="small-link">
-                { ReactHtmlParser (homePageBannerData?.more_details_link_text) }
+                  {ReactHtmlParser(homePageBannerData?.more_details_link_text)}
                 </a>
                 <br />
                 <a className="btn btn-secondary cta" href={homePageBannerData?.button_url}>
-                  <i className="fa fa-caret-right"></i>{ ReactHtmlParser (homePageBannerData?.button_text) }
+                  <i className="fa fa-caret-right"></i>{ReactHtmlParser(homePageBannerData?.button_text)}
                 </a>
                 <br /> <br />
               </div>
@@ -47,8 +59,8 @@ const Home = ({ state, libraries }) => {
       <div class="trust-builder">
         <div class="wrapper d-flex">
           <div class="headline">
-            <h2>{ ReactHtmlParser (trustbuilderData?.heading_text) }</h2>
-            <span class="sub-text">{ ReactHtmlParser (trustbuilderData?.description_text) }</span>
+            <h2>{ReactHtmlParser(trustbuilderData?.heading_text)}</h2>
+            <span class="sub-text">{ReactHtmlParser(trustbuilderData?.description_text)}</span>
           </div>
 
           <div class="trust-logos">
@@ -66,54 +78,36 @@ const Home = ({ state, libraries }) => {
 
       <div class="product-list">
         <div class="wrapper">
+          <ul>
+            {
+              productSectionData?.select_product_list?.map?.((product) => {
+                <li class="col-50">
+                  <div class="image-holder">
+                    <a href={ReactHtmlParser(product.product_url)}>
 
+                      <picture>
+                        <img class=" lazyloaded" src={ReactHtmlParser(product.product_image)} data-src={ReactHtmlParser(product.product_image)} alt={ReactHtmlParser(product.product_image_alt)} />
+                      </picture>
 
-          <ul>                <li class="col-50">
-            <div class="image-holder">
-              <a href="/single-trip-travel-insurance/">
+                    </a>
+                    <div class="price-point" style={{ display: "none" }}>8 days European cover from <span class="price">£9.99<span class="caveat"></span></span>
+                    </div>
+                  </div>
+                  <div class="text-holder">
+                    <a href={ReactHtmlParser(product.product_url)}><h3>
+                      {ReactHtmlParser(product.product_title_line_1)}  <span>{ReactHtmlParser(product.product_title_line_2)}</span>
+                    </h3></a>
+                    <span class="details-paragraph">{ReactHtmlParser(product.product_description)}</span>
 
-                <picture>
-                  <img class=" lazyloaded" src="https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2022/09/08074452/picturemessage_02yz13lz.ucw_.png" data-src="https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2022/09/08074452/picturemessage_02yz13lz.ucw_.png" alt="group of seniors laughing" />
-                </picture>
+                  </div>
 
-              </a>
-              <div class="price-point" style={{ display: "none" }}>8 days European cover from <span class="price">£9.99<span class="caveat"></span></span>
-              </div>
-            </div>
-            <div class="text-holder">
-              <a href="/single-trip-travel-insurance/"><h3>
-                Single Trip                                <span>Travel Insurance</span>
-              </h3></a>
-              <span class="details-paragraph">Covering you for one trip to any worldwide destination, with no upper age limit</span>
+                  <div class="button-holder home-page-btn-holder">
+                    <a href={ReactHtmlParser(product.product_url)} class="button btn-outline-primary" onclick="triggerGolbalGoogleEvents_Standard(`cta`, `Home page product list`, this)"><i class="fa fa-caret-right"></i> {ReactHtmlParser(product.button_text)}</a>
+                  </div>
+                </li>
+              })
+            }
 
-            </div>
-
-            <div class="button-holder home-page-btn-holder">
-              <a href="/single-trip-travel-insurance/" class="button btn-outline-primary" onclick="triggerGolbalGoogleEvents_Standard(`cta`, `Home page product list`, this)"><i class="fa fa-caret-right"></i> Find out more</a>
-            </div>
-          </li>
-            <li class="col-50" style={{ marginRight: "0" }}>
-              <div class="image-holder">
-                <a href="/annual-travel-insurance/">
-
-                  <picture>
-                    <img class=" lazyloaded" src="https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2019/02/21082548/2-e1597998348851.jpg" data-src="https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2019/02/21082548/2-e1597998348851.jpg" alt="woman on holiday" />
-                  </picture>
-
-                </a>
-              </div>
-              <div class="text-holder">
-                <a href="/annual-travel-insurance/"><h3>
-                  Annual Multi-Trip                                <span>Travel Insurance</span>
-                </h3></a>
-                <span class="details-paragraph">Flexibility to travel where you want, when you want, and as often as you want</span>
-
-              </div>
-
-              <div class="button-holder home-page-btn-holder">
-                <a href="/annual-travel-insurance/" class="button btn-outline-primary" onclick="triggerGolbalGoogleEvents_Standard(`cta`, `Home page product list`, this)"><i class="fa fa-caret-right"></i> Find out more</a>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -122,54 +116,59 @@ const Home = ({ state, libraries }) => {
         <div class="wrapper">
           <div class="usps">
             <ul>
-              <li>
-                <div class="number-holder">
-                  <div class="progress-pie-chart-1 gt-50" data-percent="98">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
-                    </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span>99<i>%</i></span>
+           
+              
+                  <li>
+                    <div class="number-holder">
+                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_filled_percentage)} >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.percentage_value)}<i>%</i></span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
 
-                </div>
-                <span>of global destinations covered</span>
-              </li>
-              <li>
-                <div class="number-holder">
-                  <div class="progress-pie-chart-2 gt-50" data-percent="98">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill-2" style={{ transform: "rotate(352.8deg)" }}></div>
                     </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span>99<i>%</i></span>
+                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_description)}</span>
+                  </li>
+
+                  <li>
+                    <div class="number-holder">
+                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_filled_percentage)} >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.percentage_value)}<i>%</i></span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
 
-                </div>
-                <span>of people say travel insurance is as important as ever**</span>
-              </li>
-              <li>
-                <div class="number-holder">
-                  <div class="progress-pie-chart-3 gt-50" data-percent="95">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill-3" style={{ transform: "rotate(352.8deg)" }}></div>
                     </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span>94<i>%</i></span>
+                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_description)}</span>
+                  </li>
+
+                  <li>
+                    <div class="number-holder">
+                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_filled_percentage)} >
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.percentage_value)}<i>%</i></span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
 
-                </div>
-                <span>of our customers rated us 4 or 5 stars^</span>
-              </li>
+                    </div>
+                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_description)}</span>
+                  </li>
+               
             </ul>
           </div>
         </div>
@@ -180,11 +179,11 @@ const Home = ({ state, libraries }) => {
           <section className="what-customer-say home-page-section">
             <div className="container d-md-flex align-items-center h-100">
               <div className="hero-details">
-                <h3>Coronavirus cover included</h3>
+                <h3>{ReactHtmlParser(tvAdvertData?.header_text)}</h3>
 
-                <p>All policies include emergency medical cover abroad for COVID-19.</p>
-                <a href="/" className="btn btn-secondary btn-bold mt-3">
-                  <i className="fas fa-caret-right"></i> Find Out More
+                <p>{ReactHtmlParser(tvAdvertData?.description_text)}</p>
+                <a href={ReactHtmlParser(tvAdvertData?.button_reference_url)} className="btn btn-secondary btn-bold mt-3">
+                  <i className="fas fa-caret-right"></i> {ReactHtmlParser(tvAdvertData?.button_text)}
                 </a>
               </div>
               <div className="video-widget">
@@ -196,13 +195,13 @@ const Home = ({ state, libraries }) => {
                   />
                   <meta
                     itemProp="description"
-                    content="<?php echo get_field('tv_advert')['video_description']; ?>"
+                    content={ReactHtmlParser(tvAdvertData?.video_description)}
                   />
                   <meta itemProp="uploadDate" content="2018-11-27" />
                   <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                     <iframe
                       src="https://player.vimeo.com/video/432167764?color=ffffff&title=0&byline=0&portrait=0"
-                      data-src="<?php echo get_field('tv_advert')['video_url']; ?>?color=ffffff&title=0&byline=0&portrait=0"
+                      data-src={ReactHtmlParser(tvAdvertData?.video_url) + "?color=ffffff&title=0&byline=0&portrait=0" }
                       frameBorder="0"
                       style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}
                       webkitallowfullscreen="true"
@@ -273,11 +272,7 @@ const Home = ({ state, libraries }) => {
       </div>
 
       <div class="disclaimer">
-        <p>§ As rated by a large UK independent consumer association</p>
-        <p>* £5,000 cancellation cover available on Comprehensive policies only</p>
-        <p>** Based on 2022 survey of 10,242 participants</p>
-        <p>^ Trustpilot data, October 2022</p>
-        <p>‡The UK’s ‘Favourite’ based on number of Trustpilot reviews </p>
+        {ReactHtmlParser(caveatData)}
       </div>
 
 

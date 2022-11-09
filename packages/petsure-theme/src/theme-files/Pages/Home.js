@@ -1,16 +1,24 @@
 import { connect } from "frontity";
-import React, { useEffect } from "react";
+import React, { useEffect , useState } from "react";
+import ReactHtmlParser from 'react-html-parser'; 
 
 const Home = ({ state, libraries }) => {
+  const [homePageBannerData,sethomePageBannerData] = useState()
+  const [trustbuilderData,setTrustbuilderData] = useState()
 
-  useEffect(async () => {
-    const data = await libraries.source.api
-      .get({
-        endpoint: "pages",
-        params: { _embed: true, id: 7 },
-      })
-      console.log(data)
+  useEffect( () => {
+    const dataJson = JSON.parse(JSON.stringify(state)).source.page
+    const acfData = dataJson[7].acf;
+    const home_page_banner = acfData.home_page_banner;
+    const trust_builder = acfData.trust_builder;
+    sethomePageBannerData(home_page_banner);
+    setTrustbuilderData(trust_builder);
+    console.log("state home data",acfData)
   }, []);
+
+  useEffect( () => {
+    console.log("state home data",homePageBannerData?.heading)
+  }, [homePageBannerData]);
 
   return (
     <>
@@ -20,18 +28,14 @@ const Home = ({ state, libraries }) => {
           <div className="row no-gutters">
             <div className="col-md-6">
               <div className="hero-summery">
-                <h1>The UK’s Favourite<br /> Travel Insurance!‡</h1>
-                <ul>
-                  <li>Pre-existing medical condition cover</li>
-                  <li>£5,000 cancellation cover<sup>*</sup> </li>
-                  <li>Superior COVID-19 protection<sup>§</sup></li>
-                </ul>
-                <a href="/coronavirus-travel-insurance" className="small-link">
-                  Find out more about Covid-19 cover
+                <h1>{ ReactHtmlParser (homePageBannerData?.heading) }</h1>
+                { ReactHtmlParser (homePageBannerData?.description) }
+                <a href={homePageBannerData?.more_details_link_reference_url} className="small-link">
+                { ReactHtmlParser (homePageBannerData?.more_details_link_text) }
                 </a>
                 <br />
-                <a className="btn btn-secondary cta" href="/">
-                  <i className="fa fa-caret-right"></i>Get quote
+                <a className="btn btn-secondary cta" href={homePageBannerData?.button_url}>
+                  <i className="fa fa-caret-right"></i>{ ReactHtmlParser (homePageBannerData?.button_text) }
                 </a>
                 <br /> <br />
               </div>
@@ -43,8 +47,8 @@ const Home = ({ state, libraries }) => {
       <div class="trust-builder">
         <div class="wrapper d-flex">
           <div class="headline">
-            <h2>The UK's Most Trusted<br />Travel Insurance Provider!</h2>
-            <span class="sub-text">We've got more <strong>5 Star</strong> reviews on <strong>Trustpilot</strong> than any other travel insurance provider.</span>
+            <h2>{ ReactHtmlParser (trustbuilderData?.heading_text) }</h2>
+            <span class="sub-text">{ ReactHtmlParser (trustbuilderData?.description_text) }</span>
           </div>
 
           <div class="trust-logos">
@@ -114,7 +118,6 @@ const Home = ({ state, libraries }) => {
         </div>
       </div>
 
-
       <div class="why-staysure">
         <div class="wrapper">
           <div class="usps">
@@ -171,7 +174,6 @@ const Home = ({ state, libraries }) => {
           </div>
         </div>
       </div>
-
 
       <div className="tv-advert-holder" id="testimonialtp">
         <div className="wrapper">

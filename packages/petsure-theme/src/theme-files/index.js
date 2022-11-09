@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'frontity';
 import Switch from "@frontity/components/switch";
-// import Page from './Pages/Page'
-import Page from './Pages/Page.jsx'
+import Page from './Pages/Page'
 import Home from './Pages/Home'
-import Link from "./link"
 import StysureMin from "../assets/staysure.min.css";
 import externalCss from "../assets/extracss/extracss.min.css";
 import themeMin from "../assets/new-theme/css/theme.min.css";
-// import Extrascss from "../assets/new-theme/css/theme.min.css";
-
+import iconsCss from "../assets/extracss/icons.css";
 import TagManager from 'react-gtm-module';
-// import  {getPageData}  from "./api";
 import { Global, css } from "frontity";
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -37,29 +33,14 @@ const Root = ({ state, actions, libraries }) => {
     <>
     <Global styles={css(StysureMin)} />
     <Global styles={css(externalCss)} />
-    <Global styles={css(themeMin)} />
-      {/* {data.isHome ?
-        <h1>Petsure Theme</h1> : ''}
-
-      <p>Current URL : {state.router.link}</p>
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/single-trip-travel-insurance">single-trip-travel-insurance</Link>
-        <Link href="/annual-travel-insurance">annual-travel-insurance</Link>
-      </nav>
-      <hr /> */}
-      {/* <main> */}
-        {/* {getPageData} */}
-        {/* <hr /> */}
+    <Global styles={css(themeMin)} /> 
+    <Global styles={css(iconsCss)} /> 
         <Header />
         <Switch>
-          {/* <Loading when={data.isFetching} /> */}
-          {/* <Page when={!data.isHome} /> */}
           <Page when={!data.isHome} />
           <Home when={data.isHome} />
         </Switch>
         <Footer />
-      {/* </main> */}
     </>
   );
 };

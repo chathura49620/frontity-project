@@ -21,6 +21,7 @@ const Page = ({ state }) => {
 
   return (
     <>
+    <div class="mt-0">
       <section class="hero-section st-product-bg single-trip-banner content-media-banner half-img-banner">
         <div class="hero-details-wrapper">
           <div class="container">
@@ -35,7 +36,7 @@ const Page = ({ state }) => {
             </div>
           </div>
         </div>
-        <div class="image-block media-block" >
+        <div class="image-block media-block" style={{backgroundImage: `url('https://dxcdkie9wax5t.cloudfront.net/wp-content/uploads/2022/05/10102032/couple-taking-selfie-in-tropical-sea-1.jpg')`}}>
         </div>
       </section>
 
@@ -892,7 +893,7 @@ const Page = ({ state }) => {
           </div>
         </div>
       </section >
-
+      </div>
     </>
   );
 };

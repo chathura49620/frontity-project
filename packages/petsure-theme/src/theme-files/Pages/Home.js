@@ -80,31 +80,34 @@ const Home = ({ state, libraries }) => {
         <div class="wrapper">
           <ul>
             {
-              productSectionData?.select_product_list?.map?.((product) => {
-                <li class="col-50">
-                  <div class="image-holder">
-                    <a href={ReactHtmlParser(product.product_url)}>
+              productSectionData?.select_product_list?.map((product) => {
+                return (
+                  <li class="col-50">
+                    <div class="image-holder">
+                      <a href={ReactHtmlParser(product.product_url)}>
 
-                      <picture>
-                        <img class=" lazyloaded" src={ReactHtmlParser(product.product_image)} data-src={ReactHtmlParser(product.product_image)} alt={ReactHtmlParser(product.product_image_alt)} />
-                      </picture>
+                        <picture>
+                          <img class=" lazyloaded" src={ReactHtmlParser(product.product_image)} data-src={ReactHtmlParser(product.product_image)} alt={ReactHtmlParser(product.product_image_alt)} />
+                        </picture>
 
-                    </a>
-                    <div class="price-point" style={{ display: "none" }}>8 days European cover from <span class="price">£9.99<span class="caveat"></span></span>
+                      </a>
+                      <div class="price-point" style={{ display: "none" }}>8 days European cover from <span class="price">£9.99<span class="caveat"></span></span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-holder">
-                    <a href={ReactHtmlParser(product.product_url)}><h3>
-                      {ReactHtmlParser(product.product_title_line_1)}  <span>{ReactHtmlParser(product.product_title_line_2)}</span>
-                    </h3></a>
-                    <span class="details-paragraph">{ReactHtmlParser(product.product_description)}</span>
+                    <div class="text-holder">
+                      <a href={ReactHtmlParser(product.product_url)}><h3>
+                        {ReactHtmlParser(product.product_title_line_1)}  <span>{ReactHtmlParser(product.product_title_line_2)}</span>
+                      </h3></a>
+                      <span class="details-paragraph">{ReactHtmlParser(product.product_description)}</span>
 
-                  </div>
+                    </div>
 
-                  <div class="button-holder home-page-btn-holder">
-                    <a href={ReactHtmlParser(product.product_url)} class="button btn-outline-primary" onclick="triggerGolbalGoogleEvents_Standard(`cta`, `Home page product list`, this)"><i class="fa fa-caret-right"></i> {ReactHtmlParser(product.button_text)}</a>
-                  </div>
-                </li>
+                    <div class="button-holder home-page-btn-holder">
+                      <a href={ReactHtmlParser(product.product_url)} class="button btn-outline-primary" onclick="triggerGolbalGoogleEvents_Standard(`cta`, `Home page product list`, this)"><i class="fa fa-caret-right"></i> {ReactHtmlParser(product.button_text)}</a>
+                    </div>
+                  </li>
+                )
+
               })
             }
 
@@ -116,59 +119,59 @@ const Home = ({ state, libraries }) => {
         <div class="wrapper">
           <div class="usps">
             <ul>
-           
-              
-                  <li>
-                    <div class="number-holder">
-                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_filled_percentage)} >
-                        <div class="ppc-progress">
-                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
-                        </div>
-                        <div class="ppc-percents">
-                          <div class="pcc-percents-wrapper">
-                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.percentage_value)}<i>%</i></span>
-                          </div>
-                        </div>
-                      </div>
 
+
+              <li>
+                <div class="number-holder">
+                  <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_filled_percentage)} >
+                    <div class="ppc-progress">
+                      <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
                     </div>
-                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_description)}</span>
-                  </li>
-
-                  <li>
-                    <div class="number-holder">
-                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_filled_percentage)} >
-                        <div class="ppc-progress">
-                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
-                        </div>
-                        <div class="ppc-percents">
-                          <div class="pcc-percents-wrapper">
-                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.percentage_value)}<i>%</i></span>
-                          </div>
-                        </div>
+                    <div class="ppc-percents">
+                      <div class="pcc-percents-wrapper">
+                        <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.percentage_value)}<i>%</i></span>
                       </div>
-
                     </div>
-                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_description)}</span>
-                  </li>
+                  </div>
 
-                  <li>
-                    <div class="number-holder">
-                      <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_filled_percentage)} >
-                        <div class="ppc-progress">
-                          <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
-                        </div>
-                        <div class="ppc-percents">
-                          <div class="pcc-percents-wrapper">
-                            <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.percentage_value)}<i>%</i></span>
-                          </div>
-                        </div>
+                </div>
+                <span>{ReactHtmlParser(whyStaysureData?.pie_chart_1?.chart_description)}</span>
+              </li>
+
+              <li>
+                <div class="number-holder">
+                  <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_filled_percentage)} >
+                    <div class="ppc-progress">
+                      <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
+                    </div>
+                    <div class="ppc-percents">
+                      <div class="pcc-percents-wrapper">
+                        <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.percentage_value)}<i>%</i></span>
                       </div>
-
                     </div>
-                    <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_description)}</span>
-                  </li>
-               
+                  </div>
+
+                </div>
+                <span>{ReactHtmlParser(whyStaysureData?.pie_chart_2?.chart_description)}</span>
+              </li>
+
+              <li>
+                <div class="number-holder">
+                  <div class="progress-pie-chart-1 gt-50" data-percent={ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_filled_percentage)} >
+                    <div class="ppc-progress">
+                      <div class="ppc-progress-fill-1" style={{ transform: "rotate(352.8deg)" }}></div>
+                    </div>
+                    <div class="ppc-percents">
+                      <div class="pcc-percents-wrapper">
+                        <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.percentage_value)}<i>%</i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <span>{ReactHtmlParser(whyStaysureData?.pie_chart_3?.chart_description)}</span>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -201,7 +204,7 @@ const Home = ({ state, libraries }) => {
                   <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                     <iframe
                       src="https://player.vimeo.com/video/432167764?color=ffffff&title=0&byline=0&portrait=0"
-                      data-src={ReactHtmlParser(tvAdvertData?.video_url) + "?color=ffffff&title=0&byline=0&portrait=0" }
+                      data-src={ReactHtmlParser(tvAdvertData?.video_url) + "?color=ffffff&title=0&byline=0&portrait=0"}
                       frameBorder="0"
                       style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}
                       webkitallowfullscreen="true"

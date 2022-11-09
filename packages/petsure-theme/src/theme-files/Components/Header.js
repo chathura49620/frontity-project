@@ -13,7 +13,7 @@ const Header = ({ state }) => {
                 <header class="siteheader clearfix home-page-header" itemscope="" itemtype="https://schema.org/brand">
                     <div class="masthead">
 
-                        <a id="mainLogo" class="main_logo" href="https://wpdemo3.staysure.co.uk/" itemprop="url">
+                        <a id="mainLogo" class="main_logo" href="/" itemprop="url">
                             <picture>
                                 <source media="(max-width: 480px)" srcset="https://wpdemo3.staysure.co.uk/wp-content/themes/staysure-wdr/assets/img/staysure-logo-nostrapline.svg" />
                                 <source media="(min-width: 480.1px)" srcset="https://wpdemo3.staysure.co.uk/wp-content/themes/staysure-wdr/assets/img/staysure-logo-strapline.svg" />
